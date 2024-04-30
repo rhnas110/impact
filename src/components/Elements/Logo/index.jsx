@@ -1,0 +1,23 @@
+import { Link } from "react-router-dom";
+
+export const Logo = () => {
+  return (
+    <h1 className="relative p-2 text-4xl lg:p-4 bg-light rounded-br-3xl">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 100 100"
+        className="absolute top-0 hidden w-10 -right-10 lg:block"
+      >
+        <path d="m100,0H0v100C0,44.77,44.77,0,100,0Z" fill="#F9F8F6"></path>
+      </svg>
+      <Link to="/">impact.</Link>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 100 100"
+        className="absolute left-0 w-10 -bottom-10"
+      >
+        <path d="m100,0H0v100C0,44.77,44.77,0,100,0Z" fill="#F9F8F6"></path>
+      </svg>
+    </h1>
+  );
+};
