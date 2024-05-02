@@ -1,4 +1,4 @@
-import heroVideo from "../../../assets/Services/Hero/ym.mp4";
+import heroVideo from "../../../assets/Services/Hero/hero.mp4";
 import { GrLinkNext } from "react-icons/gr";
 
 export const Hero = () => {

@@ -1,5 +1,5 @@
-import heroVideo from "../../../assets/Home/Hero/yae-miko.mp4";
-import emote from "../../../assets/emote/yae-miko-emote.png";
+import heroVideo from "../../../assets/Home/Hero/hero.mp4";
+import emote from "../../../assets/Emote/yae-miko-emote.png";
 import play from "../../../assets/play.jpg";
 
 import { GrLinkNext } from "react-icons/gr";

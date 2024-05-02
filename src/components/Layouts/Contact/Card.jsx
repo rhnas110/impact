@@ -1,4 +1,4 @@
-import contact from "../../../assets/contact.gif";
+import defaultImage from "../../../assets/Contact/default.gif";
 import { GrLinkNext } from "react-icons/gr";
 import { cn } from "../../../utils";
 
@@ -8,7 +8,7 @@ export const CardContact = ({ image, className }) => {
       <div className="max-w-[1440px] max-h-min mx-auto grid w-full gap-4 sm:grid-cols-[minmax(0,40%)_minmax(0,1fr)]">
         <div className="aspect-video w-full sm:min-h-[300px] sm:h-[460px] rounded-[2rem] overflow-hidden">
           <img
-            src={image ? image : contact}
+            src={image ? image : defaultImage}
             alt="Contact Image"
             className="object-cover object-center w-full h-full"
             loading="lazy"

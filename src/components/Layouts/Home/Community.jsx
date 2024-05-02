@@ -1,6 +1,6 @@
-import com1 from "../../../assets/Home/Community/com-1.webp";
-import com2 from "../../../assets/Home/Community/com-2.webp";
-import com3 from "../../../assets/Home/Community/com-3.webp";
+import com1 from "../../../assets/Home/Community/com-1.jpg";
+import com2 from "../../../assets/Home/Community/com-2.jpg";
+import com3 from "../../../assets/Home/Community/com-3.jpg";
 
 import { GrLinkNext } from "react-icons/gr";
 import { Link } from "react-router-dom";
