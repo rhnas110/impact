@@ -1,20 +1,20 @@
+import "./styles.css";
 import explore1 from "../../../../assets/Home/Explore/explore-1.jpeg";
 import explore2 from "../../../../assets/Home/Explore/explore-2.jpg";
 import explore3 from "../../../../assets/Home/Explore/explore-3.jpg";
 import explore4 from "../../../../assets/Home/Explore/explore-4.jpg";
-import "./styles.css";
 
-import { GrLinkNext } from "react-icons/gr";
 import { Link } from "react-router-dom";
 import { useState } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
+import { SwiperSlide } from "swiper/react";
 // Import Swiper styles
-import "swiper/css";
 import "swiper/css/pagination";
 // import required modules
 import { Autoplay, Pagination } from "swiper/modules";
 
 import { Map } from "./Map";
+import { Slider } from "../../../Elements/Swiper";
+import { Next } from "../../../Elements/Button/next";
 
 const explore = [
   {
@@ -46,7 +46,7 @@ export const Explore = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const image = explore[activeIndex]?.image;
   return (
-    <div className="w-full px-2 my-24 sm:px-4">
+    <section className="w-full px-2 my-24 sm:px-4">
       <div className="max-w-[1440px] max-h-min mx-auto relative flex flex-col gap-2 items-center justify-center">
         <Map />
 
@@ -60,7 +60,7 @@ export const Explore = () => {
             />
           </div>
 
-          <Swiper
+          <Slider
             pagination={{
               clickable: true,
               dynamicBullets: true,
@@ -79,7 +79,6 @@ export const Explore = () => {
             }}
             onSlideChangeTransitionEnd={function (swipe) {
               setActiveIndex(swipe.realIndex);
-              //   console.log(swipe.realIndex, "REAL INDEX");
             }}
             className="min-h-[250px] relative w-full rounded-b-[2rem] sm:rounded-[2rem] overflow-hidden bg-[#A8C3F2] sm:bg-[#EAF1FC]"
           >
@@ -95,42 +94,13 @@ export const Explore = () => {
                 <p className="sm:text-lg">{item.desc}</p>
               </SwiperSlide>
             ))}
-            {/* <p className="absolute hidden text-lg bottom-5 right-20 sm:block">
-              Read More
-            </p> */}
+
             <Link to="#" className="absolute bottom-0 right-0 z-10 group">
-              <div className="relative flex items-center justify-center w-16 h-16 rounded-tl-[2rem] bg-light">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 100 100"
-                  className="absolute right-0 w-5 rotate-180 -top-5"
-                >
-                  <path
-                    d="m100,0H0v100C0,44.77,44.77,0,100,0Z"
-                    fill="#F9F8F6"
-                  ></path>
-                </svg>
-                <i className="flex items-center justify-center w-10 h-10 bg-black rounded-full">
-                  <GrLinkNext
-                    size={15}
-                    className="transition duration-300 text-light group-hover:scale-125 group-hover:-rotate-[22.5deg]"
-                  />
-                </i>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 100 100"
-                  className="absolute bottom-0 w-5 rotate-180 -left-5"
-                >
-                  <path
-                    d="m100,0H0v100C0,44.77,44.77,0,100,0Z"
-                    fill="#F9F8F6"
-                  ></path>
-                </svg>
-              </div>
+              <Next />
             </Link>
-          </Swiper>
+          </Slider>
         </div>
       </div>
-    </div>
+    </section>
   );
 };

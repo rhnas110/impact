@@ -45,3 +45,23 @@ body::-webkit-scrollbar-thumb {
         scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
     }
 }
+
+.h1 {
+    font-size: clamp(2.625rem, 2.114rem + 1.64vw, 3.75rem)
+}
+
+.h2 {
+    font-size: clamp(2.25rem, 1.914rem + 1.36vw, 3.5rem)
+}
+
+.h3 {
+    font-size: clamp(1.75rem, 1.182rem + 1.82vw, 3rem)
+}
+
+.h4 {
+    font-size: clamp(1.5rem, 1.159rem + 1.09vw, 2.25rem)
+}
+
+.h5 {
+    font-size: clamp(1.313rem, 1.17rem + .45vw, 1.625rem)
+}

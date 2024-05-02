@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { scrollTo } from "../../../utils/scroll";
 
 export const Logo = () => {
   return (
@@ -10,7 +11,9 @@ export const Logo = () => {
       >
         <path d="m100,0H0v100C0,44.77,44.77,0,100,0Z" fill="#F9F8F6"></path>
       </svg>
-      <Link to="/">impact.</Link>
+      <Link to="/" onClick={() => scrollTo(0, 0)}>
+        impact.
+      </Link>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 100 100"
@@ -18,6 +21,16 @@ export const Logo = () => {
       >
         <path d="m100,0H0v100C0,44.77,44.77,0,100,0Z" fill="#F9F8F6"></path>
       </svg>
+    </h1>
+  );
+};
+
+export const LogoPlain = () => {
+  return (
+    <h1 className="order-2 text-4xl sm:order-1">
+      <Link to="/" onClick={() => scrollTo(0, 0)}>
+        impact.
+      </Link>
     </h1>
   );
 };

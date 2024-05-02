@@ -1,9 +1,10 @@
-import { Link } from "react-router-dom";
-import { cn } from "../../../utils";
 import { Socials } from "../Navbar/socials";
+import { cn } from "../../../utils";
+import { navLinks } from "../../../data/navbar";
+import { LogoPlain } from "../../Elements/Logo";
 export const Footer = ({ className }) => {
   return (
-    <div className="w-full px-2 my-4 sm:px-4">
+    <footer className="w-full px-2 my-4 sm:px-4">
       <div
         className={cn(
           "max-w-[1440px] min-h-[360px] sm:h-[460px] mx-auto w-full bg-[#2A2C2D] rounded-[2rem] sm:p-8 px-4 py-6 text-light grid sm:grid-cols-2 gap-12 sm:gap-4",
@@ -34,36 +35,15 @@ export const Footer = ({ className }) => {
             </div>
             <div className="grid grid-cols-2 gap-2 lg:w-7/12 text-neutral-400">
               <div className="flex flex-col">
-                <a
-                  href="#"
-                  className="transition duration-300 hover:underline hover:text-light"
-                >
-                  Services
-                </a>
-                <a
-                  href="#"
-                  className="transition duration-300 hover:underline hover:text-light"
-                >
-                  Our Principles
-                </a>
-                <a
-                  href="#"
-                  className="transition duration-300 hover:underline hover:text-light"
-                >
-                  About
-                </a>
-                <a
-                  href="#"
-                  className="transition duration-300 hover:underline hover:text-light"
-                >
-                  Community
-                </a>
-                <a
-                  href="#"
-                  className="transition duration-300 hover:underline hover:text-light"
-                >
-                  Contact
-                </a>
+                {navLinks.map((link, index) => (
+                  <a
+                    href={link.url}
+                    className="transition duration-300 hover:underline hover:text-light"
+                    key={index}
+                  >
+                    {link.title}
+                  </a>
+                ))}
               </div>
               <div className="flex flex-col justify-between">
                 <div className="flex flex-col">
@@ -85,13 +65,13 @@ export const Footer = ({ className }) => {
             </div>
           </div>
           <div className="flex flex-col gap-4 sm:gap-0 sm:items-center sm:flex-row sm:justify-between">
-            <h1 className="order-2 text-4xl sm:order-1">
-              <Link to="/">impact.</Link>
-            </h1>
+            <div className="order-2 sm:order-1">
+              <LogoPlain />
+            </div>
             <Socials className="order-1 sm:order-2" />
           </div>
         </div>
       </div>
-    </div>
+    </footer>
   );
 };

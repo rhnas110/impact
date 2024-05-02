@@ -4,7 +4,7 @@ import { cn } from "../../../utils";
 
 export const CardContact = ({ image, className }) => {
   return (
-    <div className="w-full px-2 sm:px-4">
+    <section className="w-full px-2 sm:px-4">
       <div className="max-w-[1440px] max-h-min mx-auto grid w-full gap-4 sm:grid-cols-[minmax(0,40%)_minmax(0,1fr)]">
         <div className="aspect-video w-full sm:min-h-[300px] sm:h-[460px] rounded-[2rem] overflow-hidden">
           <img
@@ -21,19 +21,23 @@ export const CardContact = ({ image, className }) => {
           )}
         >
           <div className="flex flex-col gap-16">
-            <h3 className="font-bold [font-size:clamp(1.75rem,1.182rem_+_1.82vw,3rem)] leading-none">
+            <h3 className="font-bold leading-none h3">
               A lovely community impact. <br /> Play with impact.
             </h3>
             <div>
               <input
                 type="email"
                 id="email"
-                className="block w-full px-3 py-4 text-sm text-gray-900 sm:text-lg focus:outline-none bg-gray-50 rounded-2xl focus:ring-blue-500 focus:border-blue-500"
+                className="block w-full px-3 py-4 text-sm text-gray-900 sm:text-lg focus:outline-none bg-gray-50 rounded-2xl"
                 placeholder="Your Email Address"
                 required
               />
               <div className="flex justify-end mt-3 group">
-                <a href="#" className="flex items-center gap-1">
+                <a
+                  href="#"
+                  className="flex items-center gap-1"
+                  title="Subscribe"
+                >
                   <p className="text-light rounded-3xl py-0.5 px-4 sm:text-lg">
                     Subscribe
                   </p>
@@ -48,13 +52,11 @@ export const CardContact = ({ image, className }) => {
             </div>
           </div>
 
-          <div>
-            <p className="lg:text-lg lg:w-7/12">
-              Subscribe for updates, news, events, and community resources.
-            </p>
-          </div>
+          <p className="lg:text-lg lg:w-7/12">
+            Subscribe for updates, news, events, and community resources.
+          </p>
         </div>
       </div>
-    </div>
+    </section>
   );
 };

@@ -2,8 +2,8 @@ import com1 from "../../../assets/Home/Community/com-1.jpg";
 import com2 from "../../../assets/Home/Community/com-2.jpg";
 import com3 from "../../../assets/Home/Community/com-3.jpg";
 
-import { GrLinkNext } from "react-icons/gr";
 import { Link } from "react-router-dom";
+import { Next } from "../../Elements/Button/next";
 
 const community = [
   {
@@ -31,9 +31,9 @@ const community = [
 
 export const Community = () => {
   return (
-    <div className="w-full">
+    <section className="w-full">
       <div className="px-2 sm:px-8 max-w-[1440px] mx-auto sm:py-12">
-        <p className="w-full leading-none home-hero-title lg:w-9/12 xl:w-[60%]">
+        <p className="w-full leading-none h1 lg:w-9/12 xl:w-[60%]">
           A lovely community, exploring Genshin Impact with love and impact.
         </p>
 
@@ -59,35 +59,9 @@ export const Community = () => {
                       src={item.image}
                       alt={item.title}
                       className="object-cover object-center w-full h-full transition duration-300 group-hover:scale-110"
+                      loading="lazy"
                     />
-                    <div className="absolute bottom-0 right-0 flex items-center justify-center w-16 h-16 rounded-tl-[2rem] bg-light">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 100 100"
-                        className="absolute right-0 w-5 rotate-180 -top-5"
-                      >
-                        <path
-                          d="m100,0H0v100C0,44.77,44.77,0,100,0Z"
-                          fill="#F9F8F6"
-                        ></path>
-                      </svg>
-                      <i className="flex items-center justify-center w-10 h-10 bg-black rounded-full">
-                        <GrLinkNext
-                          size={15}
-                          className="transition duration-300 text-light group-hover:scale-125 group-hover:-rotate-[22.5deg]"
-                        />
-                      </i>
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 100 100"
-                        className="absolute bottom-0 w-5 rotate-180 -left-5"
-                      >
-                        <path
-                          d="m100,0H0v100C0,44.77,44.77,0,100,0Z"
-                          fill="#F9F8F6"
-                        ></path>
-                      </svg>
-                    </div>
+                    <Next />
                   </div>
                   <p className="text-xl font-bold sm:text-3xl">{item.title}</p>
                   <p className="sm:text-lg">{item.desc}</p>
@@ -97,6 +71,6 @@ export const Community = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };

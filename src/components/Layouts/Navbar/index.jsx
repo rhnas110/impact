@@ -6,6 +6,7 @@ import { Search } from "../../Elements/Search";
 import { Socials } from "./socials";
 
 import { cn } from "../../../utils";
+import { scrollTo } from "../../../utils/scroll";
 
 import { navLinks } from "../../../data/navbar";
 import { HeaderMobile } from "./headerMobile";
@@ -23,9 +24,13 @@ export const Navbar = () => {
         <nav className="flex items-center gap-4 lg:w-7/12">
           <Logo />
           <div className="items-center justify-between flex-1 hidden gap-2 px-8 py-4 rounded-full shadow-lg lg:flex backdrop-blur-lg bg-light/75">
-            <ul className="flex gap-2 font-medium">
+            <ul className="flex gap-4 font-medium">
               {navLinks.map((link, index) => (
-                <li key={index} className="hover:text-gray-600">
+                <li
+                  key={index}
+                  className="hover:text-gray-600"
+                  onClick={() => scrollTo(0, 0)}
+                >
                   <Link to={link.url}>{link.title}</Link>
                 </li>
               ))}
