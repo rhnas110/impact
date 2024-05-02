@@ -18,13 +18,30 @@ export const Search = () => {
         <input
           type="text"
           placeholder="Search here..."
-          className="w-full h-full px-4 bg-transparent focus:outline-none placeholder:text-gray-600"
+          className="w-full h-full px-4 focus:outline-none placeholder:text-gray-600 bg-light/75"
         />
       </div>
       <div
-        className="absolute p-2 rounded-full shadow-lg cursor-pointer backdrop-blur-lg right-2"
+        className="absolute p-2 rounded-full shadow-lg cursor-pointer backdrop-blur-lg right-2 bg-light/75"
         onClick={handleOpen}
       >
+        <IoSearch size={25} className="rotate-90" />
+      </div>
+    </div>
+  );
+};
+
+export const FullSearch = () => {
+  return (
+    <div className="relative flex items-center">
+      <div className="w-full overflow-hidden rounded-full shadow-lg h-14 backdrop-blur-lg">
+        <input
+          type="text"
+          placeholder="Search here..."
+          className="w-full h-full px-4 focus:outline-none placeholder:text-gray-600 bg-light/75"
+        />
+      </div>
+      <div className="absolute p-2 rounded-full shadow-lg cursor-pointer backdrop-blur-lg right-2 bg-light/75">
         <IoSearch size={25} className="rotate-90" />
       </div>
     </div>
