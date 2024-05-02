@@ -1,20 +1,31 @@
-import defaultVideo from "../../../assets/Home/Hero/hero.mp4";
+import defaultVideo from "../../../assets/Home/Hero/default.mp4";
+import defaultImage from "../../../assets/Home/Hero/default.webp";
 import { ScrollTarget } from "../../Elements/Button";
 
-export const Hero = ({ video, quote, scrollTarget }) => {
+// type: 0/false = video, 1/true = image
+export const Hero = ({ type, video, image, quote, scrollTarget }) => {
+  const src = type ? image : video;
   return (
     <div className="w-full h-[95dvh] relative">
       <div className="w-full h-full overflow-hidden rounded-[2rem] bg-neutral-950">
-        <video
-          id="heroVideo"
-          autoPlay
-          muted
-          loop
-          playsInline
-          className="object-cover object-center w-full h-full"
-        >
-          <source src={video ? video : defaultVideo} type="video/mp4" />
-        </video>
+        {type ? (
+          <img
+            src={src ? image : defaultImage}
+            alt="heroImage"
+            className="object-cover object-center w-full h-full"
+          />
+        ) : (
+          <video
+            id="heroVideo"
+            autoPlay
+            muted
+            loop
+            playsInline
+            className="object-cover object-center w-full h-full"
+          >
+            <source src={src ? video : defaultVideo} type="video/mp4" />
+          </video>
+        )}
       </div>
       <div className="absolute bottom-0 left-0 w-[80%] sm:pt-6 sm:pr-8 pt-4 sm:w-9/12 lg:w-1/2 bg-light rounded-tr-3xl">
         <svg

@@ -1,16 +1,18 @@
-import heroVideo from "../../../assets/Services/Hero/hero.mp4";
+import defaultImage from "../../../assets/Services/Hero/default.gif";
 import contact from "../../../assets/Contact/furina.gif";
 
 import { CardContact } from "../Contact/Card";
 import { Hero } from "../Hero";
-
+import { randomIntFromInterval } from "../../../utils";
+const src = [defaultImage, ""];
 export const Services = () => {
   return (
     <>
       <section className="w-full px-2 pt-2 mb-24 sm:px-4">
         <div className="max-w-[1440px] mx-auto">
           <Hero
-            video={heroVideo}
+            type={1}
+            image={src[randomIntFromInterval(0, src.length - 1)]}
             quote="Yesterday’s experiences make me stronger today."
             scrollTarget="services"
           />
@@ -43,7 +45,7 @@ export const Services = () => {
         </div>
       </div>
 
-      <CardContact image={contact} />
+      <CardContact image={contact} className="bg-[#4F70EA]" />
     </>
   );
 };
