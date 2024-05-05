@@ -5,6 +5,7 @@ import map3 from "../../../../assets/Home/Explore/map-3.jpg";
 import { Link } from "react-router-dom";
 import { Next } from "../../../Elements/Button/next";
 import { MotionInView } from "../../../Elements/Motion";
+import { Image } from "../../../Elements/Image";
 
 export const Map = () => {
   return (
@@ -18,11 +19,11 @@ export const Map = () => {
           whileInView={{ opacity: 1, x: "0" }}
           amount={0}
         >
-          <img
+          <Image
             src={map1}
             alt="Map 1"
-            className="object-cover object-center w-full h-full transition duration-300 group-hover:scale-110"
-            loading="lazy"
+            lazy
+            className="transition duration-300 group-hover:scale-110"
           />
           <p className="absolute text-lg sm:text-xl lg:text-2xl font-bold drop-shadow-[0_2px_0_rgba(51,51,51,1)] top-4 left-4 text-light">
             Explore the World of Genshin
@@ -40,11 +41,11 @@ export const Map = () => {
           whileInView={{ opacity: 1, x: "0" }}
           amount={0}
         >
-          <img
+          <Image
             src={map2}
             alt="Map 2"
-            className="object-cover object-center w-full h-full transition duration-300 group-hover:scale-110"
-            loading="lazy"
+            lazy
+            className="transition duration-300 group-hover:scale-110"
           />
           <p className="absolute text-lg sm:text-xl lg:text-2xl font-bold drop-shadow-[0_2px_0_rgba(51,51,51,1)] top-4 left-4 text-light">
             Play, Get Your Mission, Chill in Teyvat
@@ -62,11 +63,11 @@ export const Map = () => {
           whileInView={{ opacity: 1, x: "0" }}
           amount={0}
         >
-          <img
+          <Image
             src={map3}
             alt="Map 3"
-            className="object-cover object-center w-full h-full transition duration-300 group-hover:scale-110"
-            loading="lazy"
+            lazy
+            className="transition duration-300 group-hover:scale-110"
           />
           <p className="absolute text-lg sm:text-xl lg:text-2xl font-bold drop-shadow-[0_2px_0_rgba(51,51,51,1)] top-4 left-4 text-light">
             Connect, Create, Forge Epic Missions with Friends

@@ -8,6 +8,7 @@ import { services } from "../../../data/services";
 import { Slider } from "../../Elements/Swiper";
 import { Next } from "../../Elements/Button/next";
 import { MotionInView } from "../../Elements/Motion";
+import { Image } from "../../Elements/Image";
 
 export const Services = () => {
   return (
@@ -86,11 +87,11 @@ export const Services = () => {
                     <p className="absolute top-4 left-6 font-bold text-light drop-shadow-[0_2px_0_rgba(51,51,51,1)] text-3xl">
                       {service.title}
                     </p>
-                    <img
+                    <Image
                       src={service.image}
                       alt={service.title}
-                      className="object-cover object-center w-1/2 transition duration-300 rounded-full group-hover:scale-110"
-                      loading="lazy"
+                      className="w-1/2 h-auto transition duration-300 bg-transparent rounded-full group-hover:scale-110"
+                      lazy
                     />
                     <Next />
                   </div>

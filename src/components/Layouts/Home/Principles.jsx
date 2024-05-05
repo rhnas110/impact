@@ -1,17 +1,14 @@
 import rs from "../../../assets/Home/Principles/rs.gif";
 import { GrLinkNext } from "react-icons/gr";
 import { MotionInView } from "../../Elements/Motion";
+import { Image } from "../../Elements/Image";
 
 export const Principles = () => {
   return (
     <section className="w-full h-[85dvh] px-2 my-24 sm:px-4">
       <div className="max-w-[1440px] h-full mx-auto relative flex items-center justify-center">
         <div className="w-full h-full overflow-hidden rounded-[2rem] bg-neutral-950">
-          <img
-            src={rs}
-            alt="rs"
-            className="object-cover object-center w-full h-full"
-          />
+          <Image src={rs} alt="rs" lazy />
         </div>
         <div className="absolute flex flex-col items-center justify-center text-center">
           <ul className="flex flex-col items-center mb-4">

@@ -26,3 +26,16 @@ export const MotionInView = ({ children, className, ...props }) => {
     </motion.div>
   );
 };
+
+export const MotionImage = ({ src, alt, lazy, className, ...props }) => {
+  return (
+    <motion.img
+      {...props}
+      transition={props.transition || transition}
+      className={cn("w-full h-full object-cover object-center", className)}
+      src={src}
+      alt={alt || "Alt Image"}
+      loading={lazy ? "lazy" : "eager"}
+    />
+  );
+};

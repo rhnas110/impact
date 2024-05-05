@@ -4,9 +4,7 @@ import com3 from "../../../assets/Home/Community/com-3.jpg";
 
 import { Link } from "react-router-dom";
 import { Next } from "../../Elements/Button/next";
-import { MotionInView } from "../../Elements/Motion";
-import { motion } from "../../../utils/motion";
-import { transition } from "../../../config/transition.config";
+import { MotionImage, MotionInView } from "../../Elements/Motion";
 
 const community = [
   {
@@ -73,17 +71,16 @@ export const Community = () => {
                       >
                         {item.category}
                       </span>
-                      <motion.img
+                      <MotionImage
+                        src={item.image}
+                        alt={item.title}
+                        lazy
                         initial={{
                           opacity: 0,
                           filter: "blur(2rem)",
                         }}
                         animate={{ opacity: 1, filter: "blur(0px)" }}
-                        transition={transition}
-                        src={item.image}
-                        alt={item.title}
-                        className="object-cover object-center w-full h-full transition duration-300 group-hover:scale-110"
-                        loading="lazy"
+                        className="transition duration-300 group-hover:scale-110"
                       />
                       <Next />
                     </div>

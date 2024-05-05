@@ -1,7 +1,9 @@
 import defaultVideo from "../../../assets/Home/Hero/default.mp4";
 import defaultImage from "../../../assets/Home/Hero/default.webp";
 import { ScrollTarget } from "../../Elements/Button";
+import { Image } from "../../Elements/Image";
 import { Motion } from "../../Elements/Motion";
+import { Video } from "../../Elements/Video";
 
 // type: 0/false = video, 1/true = image
 export const Hero = ({ type, video, image, quote, scrollTarget }) => {
@@ -10,22 +12,15 @@ export const Hero = ({ type, video, image, quote, scrollTarget }) => {
     <div className="w-full h-[95dvh] relative">
       <div className="w-full h-full overflow-hidden rounded-[2rem] bg-neutral-950">
         {type ? (
-          <img
-            src={src ? image : defaultImage}
-            alt="heroImage"
-            className="object-cover object-center w-full h-full"
-          />
+          <Image src={src ? image : defaultImage} alt="heroImage" lazy />
         ) : (
-          <video
-            id="heroVideo"
+          <Video
             autoPlay
             muted
             loop
             playsInline
-            className="object-cover object-center w-full h-full"
-          >
-            <source src={src ? video : defaultVideo} type="video/mp4" />
-          </video>
+            src={src ? video : defaultVideo}
+          />
         )}
       </div>
       <div className="absolute bottom-0 left-0 w-[80%] sm:pt-6 sm:pr-8 pt-4 sm:w-9/12 lg:w-1/2 bg-light rounded-tr-3xl">

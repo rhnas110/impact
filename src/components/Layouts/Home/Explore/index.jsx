@@ -16,6 +16,7 @@ import { Map } from "./Map";
 import { Slider } from "../../../Elements/Swiper";
 import { Next } from "../../../Elements/Button/next";
 import { MotionInView } from "../../../Elements/Motion";
+import { Image } from "../../../Elements/Image";
 
 import { Mobile } from "../../../../utils/screen";
 
@@ -60,11 +61,11 @@ export const Explore = () => {
               whileInView={{ opacity: 1, x: "0" }}
               amount={0}
             >
-              <img
+              <Image
                 src={image}
                 alt="Explore Image"
-                className="object-cover object-center w-full h-full image-animate"
-                loading="lazy"
+                lazy
+                className="image-animate"
               />
             </MotionInView>
           </div>

@@ -2,7 +2,9 @@ import defaultImage from "../../../assets/Contact/default.gif";
 import { GrLinkNext } from "react-icons/gr";
 import { cn } from "../../../utils";
 import { Mobile } from "../../../utils/screen";
+
 import { MotionInView } from "../../Elements/Motion";
+import { Image } from "../../Elements/Image";
 
 export const CardContact = ({ image, className }) => {
   return (
@@ -13,11 +15,10 @@ export const CardContact = ({ image, className }) => {
             initial={{ opacity: 0, x: Mobile ? "0" : "-15%" }}
             whileInView={{ opacity: 1, x: "0" }}
           >
-            <img
+            <Image
               src={image ? image : defaultImage}
               alt="Contact Image"
-              className="object-cover object-center w-full h-full"
-              loading="lazy"
+              lazy
             />
           </MotionInView>
         </div>
