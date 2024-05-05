@@ -4,6 +4,7 @@ import map3 from "../../../../assets/Home/Explore/map-3.jpg";
 
 import { Link } from "react-router-dom";
 import { Next } from "../../../Elements/Button/next";
+import { MotionInView } from "../../../Elements/Motion";
 
 export const Map = () => {
   return (
@@ -12,48 +13,66 @@ export const Map = () => {
         to="#"
         className="sm:row-span-2 group w-full sm:h-[460px] rounded-[2rem] overflow-hidden relative"
       >
-        <img
-          src={map1}
-          alt="Map 1"
-          className="object-cover object-center w-full h-full transition duration-300 group-hover:scale-110"
-          loading="lazy"
-        />
-        <p className="absolute text-lg sm:text-xl lg:text-2xl font-bold drop-shadow-[0_2px_0_rgba(51,51,51,1)] top-4 left-4 text-light">
-          Explore the World of Genshin
-        </p>
-        <Next />
+        <MotionInView
+          initial={{ opacity: 0, x: "-15%" }}
+          whileInView={{ opacity: 1, x: "0" }}
+          amount={0}
+        >
+          <img
+            src={map1}
+            alt="Map 1"
+            className="object-cover object-center w-full h-full transition duration-300 group-hover:scale-110"
+            loading="lazy"
+          />
+          <p className="absolute text-lg sm:text-xl lg:text-2xl font-bold drop-shadow-[0_2px_0_rgba(51,51,51,1)] top-4 left-4 text-light">
+            Explore the World of Genshin
+          </p>
+          <Next />
+        </MotionInView>
       </Link>
 
       <Link
         to="#"
         className="group w-full sm:h-[230px] rounded-[2rem] overflow-hidden relative"
       >
-        <img
-          src={map2}
-          alt="Map 2"
-          className="object-cover object-center w-full h-full transition duration-300 group-hover:scale-110"
-          loading="lazy"
-        />
-        <p className="absolute text-lg sm:text-xl lg:text-2xl font-bold drop-shadow-[0_2px_0_rgba(51,51,51,1)] top-4 left-4 text-light">
-          Play, Get Your Mission, Chill in Teyvat
-        </p>
-        <Next />
+        <MotionInView
+          initial={{ opacity: 0, x: "10%" }}
+          whileInView={{ opacity: 1, x: "0" }}
+          amount={0}
+        >
+          <img
+            src={map2}
+            alt="Map 2"
+            className="object-cover object-center w-full h-full transition duration-300 group-hover:scale-110"
+            loading="lazy"
+          />
+          <p className="absolute text-lg sm:text-xl lg:text-2xl font-bold drop-shadow-[0_2px_0_rgba(51,51,51,1)] top-4 left-4 text-light">
+            Play, Get Your Mission, Chill in Teyvat
+          </p>
+          <Next />
+        </MotionInView>
       </Link>
 
       <Link
         to="#"
         className="sm:col-start-2 group w-full sm:h-[230px] rounded-[2rem] overflow-hidden relative"
       >
-        <img
-          src={map3}
-          alt="Map 3"
-          className="object-cover object-center w-full h-full transition duration-300 group-hover:scale-110"
-          loading="lazy"
-        />
-        <p className="absolute text-lg sm:text-xl lg:text-2xl font-bold drop-shadow-[0_2px_0_rgba(51,51,51,1)] top-4 left-4 text-light">
-          Connect, Create, Forge Epic Missions with Friends
-        </p>
-        <Next />
+        <MotionInView
+          initial={{ opacity: 0, x: "5%" }}
+          whileInView={{ opacity: 1, x: "0" }}
+          amount={0}
+        >
+          <img
+            src={map3}
+            alt="Map 3"
+            className="object-cover object-center w-full h-full transition duration-300 group-hover:scale-110"
+            loading="lazy"
+          />
+          <p className="absolute text-lg sm:text-xl lg:text-2xl font-bold drop-shadow-[0_2px_0_rgba(51,51,51,1)] top-4 left-4 text-light">
+            Connect, Create, Forge Epic Missions with Friends
+          </p>
+          <Next />
+        </MotionInView>
       </Link>
     </div>
   );

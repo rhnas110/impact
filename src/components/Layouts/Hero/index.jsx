@@ -1,6 +1,7 @@
 import defaultVideo from "../../../assets/Home/Hero/default.mp4";
 import defaultImage from "../../../assets/Home/Hero/default.webp";
 import { ScrollTarget } from "../../Elements/Button";
+import { Motion } from "../../Elements/Motion";
 
 // type: 0/false = video, 1/true = image
 export const Hero = ({ type, video, image, quote, scrollTarget }) => {
@@ -35,9 +36,15 @@ export const Hero = ({ type, video, image, quote, scrollTarget }) => {
         >
           <path d="m100,0H0v100C0,44.77,44.77,0,100,0Z" fill="#F9F8F6"></path>
         </svg>
-        <h1 className="leading-none text-left h1">
-          {quote ? quote : "I need your actions, not your words."}
-        </h1>
+        <Motion
+          initial={{ opacity: 0, y: "-25%" }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: "-25%" }}
+        >
+          <h1 className="leading-none text-left h1">
+            {quote ? quote : "I need your actions, not your words."}
+          </h1>
+        </Motion>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 100 100"
@@ -45,7 +52,14 @@ export const Hero = ({ type, video, image, quote, scrollTarget }) => {
         >
           <path d="m100,0H0v100C0,44.77,44.77,0,100,0Z" fill="#F9F8F6"></path>
         </svg>
-        <ScrollTarget target={scrollTarget ? scrollTarget : ""} />
+
+        <Motion
+          initial={{ opacity: 0, y: "-50%" }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: "-50%" }}
+        >
+          <ScrollTarget target={scrollTarget ? scrollTarget : ""} />
+        </Motion>
       </div>
     </div>
   );

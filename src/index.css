@@ -19,6 +19,7 @@ html {
 body {
     background: theme("colors.light");
     font-family: "Matter SQ Regular";
+    overflow-x: hidden;
 
     --sb-track-color: #ffffff;
     --sb-thumb-color: #2a2c2d;

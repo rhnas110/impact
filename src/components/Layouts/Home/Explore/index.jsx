@@ -15,6 +15,9 @@ import { Autoplay, Pagination } from "swiper/modules";
 import { Map } from "./Map";
 import { Slider } from "../../../Elements/Swiper";
 import { Next } from "../../../Elements/Button/next";
+import { MotionInView } from "../../../Elements/Motion";
+
+import { Mobile } from "../../../../utils/screen";
 
 const explore = [
   {
@@ -52,53 +55,66 @@ export const Explore = () => {
 
         <div className="sm:grid w-full gap-2 sm:grid-cols-[minmax(0,60%)_minmax(0,1fr)] lg:grid-cols-[minmax(0,70%)_minmax(0,1fr)]">
           <div className="w-full h-[clamp(300px,560px)] rounded-t-[2rem] sm:rounded-[2rem] overflow-hidden">
-            <img
-              src={image}
-              alt="Explore Image"
-              className="object-cover object-center w-full h-full image-animate"
-              loading="lazy"
-            />
+            <MotionInView
+              initial={{ opacity: 0, x: Mobile ? "0" : "-15%" }}
+              whileInView={{ opacity: 1, x: "0" }}
+              amount={0}
+            >
+              <img
+                src={image}
+                alt="Explore Image"
+                className="object-cover object-center w-full h-full image-animate"
+                loading="lazy"
+              />
+            </MotionInView>
           </div>
 
-          <Slider
-            pagination={{
-              clickable: true,
-              dynamicBullets: true,
-              dynamicMainBullets: 2,
-            }}
-            modules={[Pagination, Autoplay]}
-            slidesPerView={1}
-            loop={true}
-            grabCursor={true}
-            spaceBetween={40}
-            a11y={false}
-            speed={1000}
-            autoplay={{
-              delay: 3000,
-              disableOnInteraction: false,
-            }}
-            onSlideChangeTransitionEnd={function (swipe) {
-              setActiveIndex(swipe.realIndex);
-            }}
-            className="min-h-[250px] relative w-full rounded-b-[2rem] sm:rounded-[2rem] overflow-hidden bg-[#A8C3F2] sm:bg-[#EAF1FC]"
+          <MotionInView
+            initial={{ opacity: 0, x: Mobile ? "0" : "10%" }}
+            whileInView={{ opacity: 1, x: "0" }}
+            className="w-full min-h-[250px]"
+            amount={0}
           >
-            {explore.map((item, index) => (
-              <SwiperSlide
-                key={index}
-                className="flex flex-col gap-3 px-4 py-4 sm:px-8 sm:pt-8 sm:gap-6"
-              >
-                <p className="px-4 py-1 border-2 border-black w-min rounded-3xl">
-                  {item.category}
-                </p>
-                <p className="text-xl font-bold sm:text-3xl">{item.title}</p>
-                <p className="sm:text-lg">{item.desc}</p>
-              </SwiperSlide>
-            ))}
+            <Slider
+              pagination={{
+                clickable: true,
+                dynamicBullets: true,
+                dynamicMainBullets: 2,
+              }}
+              modules={[Pagination, Autoplay]}
+              slidesPerView={1}
+              loop={true}
+              grabCursor={true}
+              spaceBetween={40}
+              a11y={false}
+              speed={1000}
+              autoplay={{
+                delay: 3000,
+                disableOnInteraction: false,
+              }}
+              onSlideChangeTransitionEnd={function (swipe) {
+                setActiveIndex(swipe.realIndex);
+              }}
+              className="h-full relative w-full rounded-b-[2rem] sm:rounded-[2rem] overflow-hidden bg-[#A8C3F2] sm:bg-[#EAF1FC]"
+            >
+              {explore.map((item, index) => (
+                <SwiperSlide
+                  key={index}
+                  className="flex flex-col gap-3 px-4 py-4 sm:px-8 sm:pt-8 sm:gap-6"
+                >
+                  <p className="px-4 py-1 border-2 border-black w-min rounded-3xl">
+                    {item.category}
+                  </p>
+                  <p className="text-xl font-bold sm:text-3xl">{item.title}</p>
+                  <p className="sm:text-lg">{item.desc}</p>
+                </SwiperSlide>
+              ))}
 
-            <Link to="#" className="absolute bottom-0 right-0 z-10 group">
-              <Next />
-            </Link>
-          </Slider>
+              <Link to="#" className="absolute bottom-0 right-0 z-10 group">
+                <Next />
+              </Link>
+            </Slider>
+          </MotionInView>
         </div>
       </div>
     </section>
