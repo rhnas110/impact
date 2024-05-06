@@ -4,6 +4,7 @@ import { Autoplay } from "swiper/modules";
 
 import { Link } from "react-router-dom";
 
+import { breakpoints } from "../../../config/swiper.config";
 import { services } from "../../../data/services";
 import { Slider } from "../../Elements/Swiper";
 import { Next } from "../../Elements/Button/next";
@@ -49,33 +50,7 @@ export const Services = () => {
             disableOnInteraction: false,
           }}
           className="w-full py-4"
-          breakpoints={{
-            0: {
-              slidesPerView: 1,
-              spaceBetween: 10,
-            },
-            374: {
-              slidesPerView: 1.1,
-            },
-            480: {
-              slidesPerView: 2,
-            },
-            767: {
-              slidesPerView: 2.25,
-            },
-            992: {
-              slidesPerView: 3,
-            },
-            1025: {
-              slidesPerView: 3.1,
-            },
-            1281: {
-              slidesPerView: 4.1,
-            },
-            1441: { slidesPerView: 4.5 },
-            1601: { slidesPerView: 5 },
-            1921: { slidesPerView: 6 },
-          }}
+          breakpoints={breakpoints}
         >
           {services?.map((service, index) => {
             return (

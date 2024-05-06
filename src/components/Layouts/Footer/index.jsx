@@ -12,10 +12,14 @@ export const Footer = ({ className }) => {
         )}
       >
         <div>
-          <p className="text-xl leading-none sm:text-2xl md:w-9/12">
-            impact. is lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            Alias dolor libero soluta nam tenetur rem quis ullam veniam ab est.
-          </p>
+          <h5 className="leading-none h5 lg:w-9/12 md:w-10/12">
+            <p>
+              impact. is your gateway to the enchanting universe of Genshin
+              Impact. Explore Teyvat&#39;s breathtaking landscapes, connect with
+              friends, and uncover mysteries. Welcome to impact, where your
+              journey begins.
+            </p>
+          </h5>
         </div>
         <div className="flex flex-col justify-between gap-12 sm:gap-0">
           <div className="flex flex-col gap-8">

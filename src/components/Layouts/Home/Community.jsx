@@ -11,22 +11,22 @@ const community = [
     image: com1,
     category: "Chill",
     bgCategory: "bg-[#32C58B]",
-    title: "What are the 3 Horizons of Transformative Innovation?",
-    desc: "Three Horizons thinking is a useful method for making sense of and facilitating transformative innovation.",
+    title: "Genshin Impact's Kawaii Queens: Adorable Female Characters",
+    desc: "Discover the radiant beauty of Genshin Impact's female characters, whose loveliness knows no bounds. From the cute and charming to the elegant and graceful, they bloom like roses in Teyvat's landscape.",
   },
   {
     image: com2,
     category: "Misson",
     bgCategory: "bg-[#B1653B]",
-    title: "Living Systems Thinking: Exploring the Integral Patterns of Life",
-    desc: "At the cutting edge of science, a new way of making sense of the world is beginning to emerge. One that moves from parts to wholes, from quantities to qualities, from measuring to mapping from absolute certainty to approximate knowledge.",
+    title: "Teyvat Wanderers Union",
+    desc: "A welcoming space for Genshin Impact fans. Discuss updates, theories, and lore. Join events and make lasting friendships here!",
   },
   {
     image: com3,
     category: "Play",
     bgCategory: "bg-[#77A3AB]",
-    title: "Why We Need to Rethink Our Worldview",
-    desc: "In today's rapidly changing world, our dominant worldview is being challenged by the complexities and interconnectedness of global issues.",
+    title: "Genshin Impact - Cinematic Experience",
+    desc: "With its stunning visuals, captivating soundtrack, and epic cutscenes, Genshin Impact offers players a cinematic gaming experience like no other.",
   },
 ];
 

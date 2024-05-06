@@ -3,6 +3,29 @@ import { GrLinkNext } from "react-icons/gr";
 import { MotionInView } from "../../Elements/Motion";
 import { Image } from "../../Elements/Image";
 
+const principles = [
+  {
+    title: "Genshin Quest",
+    initialY: "-25%",
+    className: "-mb-1 md:-mb-1.5 lg:-mb-2",
+  },
+  {
+    title: "Genshin Universe",
+    initialY: "-35%",
+    className: "-mb-1 md:-mb-1.5 lg:-mb-2",
+  },
+  {
+    title: "Journey Rediscovered",
+    initialY: "-45%",
+    className: "-mb-1 md:-mb-1.5 lg:-mb-2",
+  },
+  {
+    title: "impact. Connection",
+    initialY: "-55%",
+    className: "",
+  },
+];
+
 export const Principles = () => {
   return (
     <section className="w-full h-[85dvh] px-2 my-24 sm:px-4">
@@ -12,46 +35,21 @@ export const Principles = () => {
         </div>
         <div className="absolute flex flex-col items-center justify-center text-center">
           <ul className="flex flex-col items-center mb-4">
-            <MotionInView
-              initial={{ opacity: 0, y: "-25%" }}
-              whileInView={{ opacity: 1, y: "0" }}
-              amount={1}
-              className="w-auto h-auto"
-            >
-              <li className="-mb-1 md:-mb-1.5 lg:-mb-2">
-                <PrinciplesText title="Genshin Quest" />
-              </li>
-            </MotionInView>
-            <MotionInView
-              initial={{ opacity: 0, y: "-35%" }}
-              whileInView={{ opacity: 1, y: "0" }}
-              amount={1}
-              className="w-auto h-auto"
-            >
-              <li className="-mb-1 md:-mb-1.5 lg:-mb-2">
-                <PrinciplesText title="Genshin Universe" />
-              </li>
-            </MotionInView>
-            <MotionInView
-              initial={{ opacity: 0, y: "-45%" }}
-              whileInView={{ opacity: 1, y: "0" }}
-              amount={1}
-              className="w-auto h-auto"
-            >
-              <li className="-mb-1 md:-mb-1.5 lg:-mb-2">
-                <PrinciplesText title="Journey Rediscovered" />
-              </li>
-            </MotionInView>
-            <MotionInView
-              initial={{ opacity: 0, y: "-55%" }}
-              whileInView={{ opacity: 1, y: "0" }}
-              amount={1}
-              className="w-auto h-auto"
-            >
-              <li>
-                <PrinciplesText title="impact. Connection" />
-              </li>
-            </MotionInView>
+            {principles.map((principle, index) => {
+              return (
+                <MotionInView
+                  key={index}
+                  initial={{ opacity: 0, y: principle.initialY }}
+                  whileInView={{ opacity: 1, y: "0" }}
+                  amount={1}
+                  className="w-auto h-auto"
+                >
+                  <li className={principle.className}>
+                    <PrinciplesText title={principle.title} />
+                  </li>
+                </MotionInView>
+              );
+            })}
           </ul>
           <MotionInView
             initial={{ opacity: 0, y: "55%" }}
@@ -79,7 +77,7 @@ export const Principles = () => {
 
 const PrinciplesText = ({ title }) => {
   return (
-    <h4 className="leading-none tracking-tighter text-[#E1ABA3]  w-min rounded-3xl whitespace-nowrap px-5 h4 drop-shadow-[0_2px_0_rgba(40,35,81,1)]">
+    <h4 className="leading-none tracking-tighter text-[#E1ABA3] w-min rounded-3xl whitespace-nowrap px-5 h4 drop-shadow-[0_2px_0_rgba(40,35,81,1)]">
       {title}
     </h4>
   );
