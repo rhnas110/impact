@@ -32,7 +32,10 @@ export const MotionImage = ({ src, alt, lazy, className, ...props }) => {
     <motion.img
       {...props}
       transition={props.transition || transition}
-      className={cn("w-full h-full object-cover object-center", className)}
+      className={cn(
+        "w-full h-full object-cover object-center bg-[#BED2F5]",
+        className
+      )}
       src={src}
       alt={alt || "Alt Image"}
       loading={lazy ? "lazy" : "eager"}
