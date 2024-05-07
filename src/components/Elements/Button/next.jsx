@@ -1,8 +1,14 @@
 import { GrLinkNext } from "react-icons/gr";
+import { cn } from "../../../utils";
 
-export const Next = () => {
+export const Next = ({ className }) => {
   return (
-    <div className="absolute bottom-0 right-0 flex items-center justify-center w-16 h-16 rounded-tl-[2rem] bg-light">
+    <div
+      className={cn(
+        "absolute bottom-0 right-0 flex items-center justify-center w-16 h-16 rounded-tl-[2rem] bg-light",
+        className
+      )}
+    >
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 100 100"

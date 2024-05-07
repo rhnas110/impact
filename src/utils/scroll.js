@@ -1,5 +1,9 @@
 export function scrollTo(x = 0, y = 69) {
-  return window.scroll(x, y);
+  window.scrollTo({
+    top: y,
+    left: x,
+    behavior: "smooth",
+  });
 }
 
 export function scrollTarget(target) {

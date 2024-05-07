@@ -9,11 +9,12 @@ import { Image } from "../../Elements/Image";
 export const CardContact = ({ image, className }) => {
   return (
     <section className="w-full px-2 sm:px-4">
-      <div className="max-w-[1440px] max-h-min mx-auto grid w-full gap-4 sm:grid-cols-[minmax(0,40%)_minmax(0,1fr)]">
+      <div className="max-w-[1440px] max-h-min mx-auto grid gap-4 sm:grid-cols-[minmax(0,40%)_minmax(0,1fr)]">
         <div className="aspect-video w-full sm:min-h-[300px] sm:h-[460px] rounded-[2rem] overflow-hidden">
           <MotionInView
             initial={{ opacity: 0, x: Mobile ? "0" : "-15%" }}
             whileInView={{ opacity: 1, x: "0" }}
+            className="overflow-hidden"
           >
             <Image
               src={image ? image : defaultImage}
@@ -25,10 +26,11 @@ export const CardContact = ({ image, className }) => {
         <MotionInView
           initial={{ opacity: 0, x: Mobile ? "0" : "15%" }}
           whileInView={{ opacity: 1, x: "0" }}
+          className="overflow-hidden"
         >
           <div
             className={cn(
-              "rounded-[2rem] overflow-hidden bg-[#3E304F] p-4 md:p-8 text-light flex h-full justify-between flex-col gap-12 sm:gap-4",
+              "w-full rounded-[2rem] overflow-hidden bg-[#3E304F] p-4 md:p-8 text-light flex h-full justify-between flex-col gap-12 sm:gap-4",
               className
             )}
           >
