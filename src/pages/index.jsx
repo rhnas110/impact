@@ -1,4 +1,5 @@
 import SEO from "../components/SEO";
+import { NotFound } from "./404";
 import { Home } from "./Home";
 import { Services } from "./Services";
 
@@ -27,4 +28,13 @@ function ServicesPage() {
   );
 }
 
-export { HomePage, ServicesPage };
+function NotFoundPage() {
+  return (
+    <Page>
+      <SEO title="404 - Page Not Found" description="404 - Page Not Found" />
+      <NotFound />
+    </Page>
+  );
+}
+
+export { HomePage, ServicesPage, NotFoundPage };

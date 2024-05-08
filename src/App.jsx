@@ -1,7 +1,7 @@
 import { AnimatePresence } from "./utils/motion";
 import { Route, Routes } from "react-router-dom";
 
-import { HomePage, ServicesPage } from "./pages";
+import { HomePage, NotFoundPage, ServicesPage } from "./pages";
 import useLenis from "./hooks/useLenis";
 
 function App() {
@@ -19,6 +19,8 @@ function App() {
             </main>
           }
         />
+
+        <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </AnimatePresence>
   );
