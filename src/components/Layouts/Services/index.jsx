@@ -4,8 +4,10 @@ import contact from "../../../assets/Contact/furina.gif";
 import { CardContact } from "../Contact/Card";
 import { Hero } from "../Hero";
 import Card from "./Card";
+import { MotionInView } from "../../Elements/Motion";
+import { Image } from "../../Elements/Image";
 import { cn, randomIntFromInterval } from "../../../utils";
-import { cards } from "../../../data/services";
+import { cards, why } from "../../../data/services";
 
 import { createRef, useRef, useState } from "react";
 import { useScroll } from "framer-motion";
@@ -78,7 +80,7 @@ export const Services = () => {
                 className={cn(
                   "sticky top-0 flex items-center justify-center h-[75dvh] md:h-[75dvh] lg:h-[90dvh] transition duration-500",
                   activeCard === cards.length
-                    ? ""
+                    ? "h-[90dvh]"
                     : "translate-y-40 sm:translate-y-32 lg:translate-y-40 xl:translate-y-36"
                 )}
               >
@@ -110,26 +112,63 @@ export const Services = () => {
           })}
         </div>
       </section>
-      {/* <div className="px-2 max-w-[1440px] mx-auto sm:py-4">
-        <h3 className="w-full font-bold leading-none h3 lg:w-9/12">
-          By facilitating systems innovation we believe we can generate social,
-          economic and environmental outcomes that will benefit the health and
-          well-being of people and the planet.
-        </h3>
-      </div> */}
-      {/* <div className="w-full mb-36">
-        <div className="px-2 sm:px-8 max-w-[1440px] mx-auto">
-          <div className="flex flex-col gap-8 my-20 xl:gap-24 xl:flex-row">
-            <span className="px-2 py-1 border-2 border-black rounded-3xl h-min w-min whitespace-nowrap">
-              Why impact.
+      <section className="px-2 max-w-[1440px] mx-auto py-8">
+        <MotionInView
+          initial={{ opacity: 0, x: "-15%" }}
+          whileInView={{ opacity: 1, x: "0" }}
+        >
+          <h3 className="w-full font-bold leading-none h3 lg:w-9/12">
+            Experience the thrilling journey through the Genshin Impact
+            immersive universe, where you can chill, connect with friends, and
+            leave a lasting{" "}
+            <span className="text-[#D9DC4E] drop-shadow-[0_2px_0_rgba(51,51,51,1)]">
+              impact.
             </span>
-            <div className="grid grid-cols-1 gap-8 sm:gap-3 sm:grid-cols-3">
-              <div>???</div>
+          </h3>
+        </MotionInView>
+      </section>
+      <section className="w-full">
+        <div className="px-2 sm:px-8 max-w-[1440px] mx-auto py-12">
+          <div className="flex flex-col gap-8 xl:gap-24 xl:flex-row">
+            <MotionInView
+              initial={{ opacity: 0, x: "-30%" }}
+              whileInView={{ opacity: 1, x: "0" }}
+            >
+              <span className="px-2 py-1 border-2 border-black rounded-3xl h-min w-min whitespace-nowrap">
+                Why impact.
+              </span>
+            </MotionInView>
+            <div className="grid grid-cols-1 gap-8 md:gap-3 md:grid-cols-3">
+              {why.map(({ id, title, desc, icon, bg, el, renderEl }) => {
+                return (
+                  <MotionInView
+                    initial={{ opacity: 0, y: "-5%" }}
+                    whileInView={{ opacity: 1, y: "0" }}
+                    key={id}
+                    className="flex"
+                  >
+                    <div className="flex flex-col justify-between gap-8 p-4 overflow-hidden bg-white border shadow-lg rounded-xl">
+                      <div className="flex flex-col gap-4">
+                        <h4 className="font-bold leading-none h4">{title}</h4>
+                        <h5 className="leading-none h5">{desc}</h5>
+                      </div>
+                      <div
+                        className={`${bg} w-12 md:w-16 overflow-hidden rounded-full aspect-square`}
+                      >
+                        {el ? (
+                          renderEl
+                        ) : (
+                          <Image src={icon} alt={"icon-" + id} lazy />
+                        )}
+                      </div>
+                    </div>
+                  </MotionInView>
+                );
+              })}
             </div>
           </div>
         </div>
-      </div> */}
-
+      </section>
       <CardContact image={contact} className="bg-[#4F70EA]" />
     </>
   );

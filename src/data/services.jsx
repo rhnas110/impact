@@ -10,6 +10,16 @@ import c2 from "../assets/Services/Card/c2.webp";
 import c3 from "../assets/Services/Card/c3.jpg";
 import c4 from "../assets/Services/Card/c4.webp";
 
+import i1 from "../assets/Services/Icon/i1.png";
+import i2 from "../assets/Services/Icon/i2.jpeg";
+import i3 from "../assets/Services/Icon/i3.png";
+import i4 from "../assets/Services/Icon/i4.png";
+import i5 from "../assets/Services/Icon/i5.png";
+import i6 from "../assets/Services/Icon/i6.png";
+import i7 from "../assets/Services/Icon/i7.svg";
+
+import { Image } from "../components/Elements/Image";
+
 export const services = [
   {
     title: "Explore",
@@ -91,5 +101,87 @@ export const cards = [
     bg: "bg-[#D28041]",
     border: "border-[#D28041]",
     id: 4,
+  },
+];
+
+export const why = [
+  {
+    id: 1,
+    title: "Unlock a Vibrant Community",
+    desc: "Join our thriving community where you can exchange ideas, share knowledge, and connect with fellow Genshin Impact enthusiasts to enhance your gaming experience.",
+    bg: "bg-[#D9DC4E]",
+    icon: "",
+    el: true,
+    renderEl: <Image src={i1} alt="i1" lazy />,
+  },
+  {
+    id: 2,
+    title: "Discover Comprehensive Resources",
+    desc: "Explore a wealth of tips, tricks, and insights about Genshin Impact, fostering a deeper understanding of the game's mechanics, lore, and strategies for optimal gameplay.",
+    bg: "bg-[#D9DC4E]",
+    icon: "",
+    el: true,
+    renderEl: <Image src={i2} alt="i2" lazy />,
+  },
+  {
+    id: 3,
+    title: "Expand Your Social Network",
+    desc: "Connect with like-minded players, make new friends, and form lasting bonds as you embark on adventures, exchange experiences, and enjoy collaborative gameplay in Genshin Impact.",
+    bg: "bg-[#D9DC4E]",
+    icon: "",
+    el: true,
+    renderEl: <Image src={i3} alt="i3" lazy />,
+  },
+  {
+    id: 4,
+    title: "Enhance Your Gaming Experience",
+    desc: "Immerse yourself in a vibrant online community dedicated to Genshin Impact, where you can enhance your gaming experience through shared knowledge, camaraderie, and collective exploration.",
+    bg: "bg-[#D9DC4E]",
+    icon: "",
+    el: true,
+    renderEl: <Image src={i4} alt="i4" lazy className="bg-light" />,
+  },
+  {
+    id: 5,
+    title: "Forge Lasting Friendships",
+    desc: "Create meaningful connections with fellow players, bond over shared interests, and forge lasting friendships that extend beyond the virtual world of Genshin Impact.",
+    bg: "bg-[#D9DC4E]",
+    icon: "",
+    el: true,
+    renderEl: <Image src={i5} alt="i5" lazy />,
+  },
+  {
+    id: 6,
+    title: "Immerse Yourself in a Dynamic Community",
+    desc: "Immerse yourself in a dynamic online community dedicated to Genshin Impact, where you can share experiences, exchange tips, and participate in collaborative activities to enhance your gameplay.",
+    bg: "bg-[#D9DC4E]",
+    icon: "",
+    el: true,
+    renderEl: <Image src={i6} alt="i6" lazy />,
+  },
+  {
+    id: 7,
+    title: "Stay Updated and Informed",
+    desc: "Stay updated with the latest news, updates, and events in the world of Genshin Impact, ensuring you're always informed and ready to embark on new adventures with your fellow players.",
+    bg: "bg-[#D9DC4E]",
+    icon: "",
+    el: true,
+    renderEl: <Image src={i7} alt="i7" lazy />,
+  },
+  {
+    id: 8,
+    title: "Immerse Yourself in Stunning Visuals",
+    desc: "Dive into the mesmerizing world of Genshin Impact, where breathtaking landscapes, vibrant characters, and captivating animations await at every turn.",
+    bg: "",
+    icon: "https://media1.tenor.com/m/TXNrUrcFeUUAAAAd/fischl-genshin-impact.gif",
+    el: false,
+  },
+  {
+    id: 9,
+    title: "Unleash Your Creativity",
+    desc: "Express yourself through art, music, and storytelling inspired by the rich lore and fantastical world of Genshin Impact, and share your creations with a global community of fellow enthusiasts.",
+    bg: "",
+    icon: "https://media.tenor.com/tFEH7-hhDTIAAAAi/kokomi-genshin-middle-finger.gif",
+    el: false,
   },
 ];

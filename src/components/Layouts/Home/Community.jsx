@@ -53,7 +53,7 @@ export const Community = () => {
             </span>
           </MotionInView>
 
-          <div className="grid grid-cols-1 gap-8 sm:gap-3 sm:grid-cols-3">
+          <div className="grid grid-cols-1 gap-8 md:gap-3 md:grid-cols-3">
             {community.map((item, index) => {
               return (
                 <Link
