@@ -12,6 +12,14 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/services" element={<Services />} />
+        <Route
+          path="/helloworld"
+          element={
+            <main>
+              <h1 className="h1">Hello World!!</h1>
+            </main>
+          }
+        />
       </Routes>
     </AnimatePresence>
   );
