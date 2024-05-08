@@ -1,8 +1,7 @@
 import { AnimatePresence } from "./utils/motion";
 import { Route, Routes } from "react-router-dom";
 
-import { Home } from "./pages/Home";
-import { Services } from "./pages/Services";
+import { HomePage, ServicesPage } from "./pages";
 import useLenis from "./hooks/useLenis";
 
 function App() {
@@ -10,8 +9,8 @@ function App() {
   return (
     <AnimatePresence>
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/services" element={<Services />} />
+        <Route path="/" element={<HomePage />} />
+        <Route path="/services" element={<ServicesPage />} />
         <Route
           path="/helloworld"
           element={
