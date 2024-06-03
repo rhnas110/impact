@@ -12,7 +12,7 @@ export const Play = () => {
     <Link
       to="https://play.google.com/store/apps/details?id=com.miHoYo.GenshinImpact&hl=id&gl=US"
       target="_blank"
-      className="h-full w-full group rounded-[2rem] overflow-hidden border border-red-500"
+      className="h-full w-full group rounded-[2rem] overflow-hidden"
       ref={containerRef}
     >
       <MotionParallax
