@@ -28,7 +28,7 @@ export const Navbar = () => {
               {navLinks.map((link, index) => (
                 <li
                   key={index}
-                  className="hover:text-gray-600"
+                  className="hover:text-gray-600 whitespace-nowrap"
                   onClick={() => scrollTo(0, 0)}
                 >
                   <Link to={link.url}>{link.title}</Link>
