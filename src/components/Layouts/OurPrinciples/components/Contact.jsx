@@ -1,35 +1,28 @@
 import { Link } from "react-router-dom";
-import { useRef } from "react";
-import { motion, useScroll, useTransform } from "../../../utils/motion";
-import { Mobile } from "../../../utils/screen";
-import { scrollTo } from "../../../utils/scroll";
-import { Next } from "../../Elements/Button/next";
-import { MotionInView } from "../../Elements/Motion";
-
+import { Mobile } from "../../../../utils/screen";
+import { scrollTo } from "../../../../utils/scroll";
+import { Next } from "../../../Elements/Button/next";
+import { MotionInView, MotionParallax } from "../../../Elements/Motion";
+import { useMotionParallax } from "../../../../hooks/useMotionParallax";
 export const Contact = () => {
-  const imageContainerRef = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: imageContainerRef,
-    offset: ["end start", "start end"],
-  });
-  const translateY = useTransform(scrollYProgress, [0, 1], ["10%", "-20%"]);
+  const { containerRef, translateY } = useMotionParallax();
   return (
     <section className="w-full px-2 sm:px-4">
       <div className="max-w-[1440px] max-h-min mx-auto grid gap-4 sm:grid-cols-[minmax(0,55%)_minmax(0,1fr)]">
         <div
           className="aspect-video w-full sm:min-h-[300px] sm:h-[480px] rounded-[2rem] overflow-hidden"
-          ref={imageContainerRef}
+          ref={containerRef}
         >
           <MotionInView
             initial={{ opacity: 0, x: Mobile ? "0" : "-15%" }}
             whileInView={{ opacity: 1, x: "0" }}
             className="overflow-hidden"
           >
-            <motion.img
+            <MotionParallax
               src="https://wallpapers.com/images/high/genshin-impact-klee-with-red-eyes-oj2s4m2nzkojm392.webp"
               alt="Contact"
-              style={{ translateY: translateY }}
-              className="object-cover object-center w-full h-[110%]"
+              lazy
+              translateY={translateY}
             />
           </MotionInView>
         </div>

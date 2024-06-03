@@ -1,9 +1,10 @@
-import { useRef, useState } from "react";
-import { cn } from "../../../utils";
-import { motion, useScroll, useTransform } from "../../../utils/motion";
-import { Mobile } from "../../../utils/screen";
-import { Badge } from "../../Elements/Badge";
-import { MotionInView } from "../../Elements/Motion";
+import { useState } from "react";
+import { Badge } from "../../../Elements/Badge";
+import { MotionInView, MotionParallax } from "../../../Elements/Motion";
+import { useMotionParallax } from "../../../../hooks/useMotionParallax";
+import { cn } from "../../../../utils";
+import { motion } from "../../../../utils/motion";
+import { Mobile } from "../../../../utils/screen";
 
 const principles = [
   {
@@ -32,16 +33,10 @@ const principles = [
       "We believe that gaming should be fun and engaging. We promote activities and events that keep the community excited and passionate about the game.",
   },
 ];
-
 export const Principles = () => {
   const [indexHover, setIndexHover] = useState(null);
   const [indexDesc, setIndexDesc] = useState(null);
-  const imageContainerRef = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: imageContainerRef,
-    offset: ["end start", "start end"],
-  });
-  const translateY = useTransform(scrollYProgress, [0, 1], ["10%", "-20%"]);
+  const { containerRef, translateY } = useMotionParallax();
   return (
     <section className="px-2 max-w-[1440px] mx-auto mb-4 lg:mb-8">
       <MotionInView
@@ -100,17 +95,17 @@ export const Principles = () => {
         <div className="relative flex justify-center lg:justify-end">
           <motion.div
             className="rounded-[2rem] lg:w-3/4 overflow-hidden md:aspect-[3/1] sm:aspect-[2/1] aspect-[2/1.5] w-full"
-            ref={imageContainerRef}
+            ref={containerRef}
             initial={{ opacity: 0, x: Mobile ? "0" : "10%" }}
             whileInView={{ opacity: 1, x: "0" }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true, amount: 0.5 }}
           >
-            <motion.img
+            <MotionParallax
               src="https://c4.wallpaperflare.com/wallpaper/680/583/609/hu-tao-genshin-impact-genshin-impact-anime-anime-girls-red-eyes-hd-wallpaper-preview.jpg"
               alt="principles"
-              style={{ translateY: translateY }}
-              className="object-cover object-center w-full h-[110%]"
+              lazy
+              translateY={translateY}
             />
           </motion.div>
           <div
