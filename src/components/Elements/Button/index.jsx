@@ -1,9 +1,13 @@
 import { GrLinkNext } from "react-icons/gr";
+import { cn } from "../../../utils";
 import { scrollTarget } from "../../../utils/scroll";
-export const ScrollTarget = ({ target }) => {
+export const ScrollTarget = ({ target, className }) => {
   return (
     <button
-      className="items-center justify-center hidden mt-8 border border-black rounded-full w-14 h-14 group sm:flex"
+      className={cn(
+        "w-12 h-12 flex items-center justify-center mt-4 xs:mt-8 border border-black rounded-full xs:w-14 xs:h-14 group",
+        className
+      )}
       onClick={() => scrollTarget(target)}
     >
       <GrLinkNext

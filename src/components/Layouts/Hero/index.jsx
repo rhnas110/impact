@@ -6,7 +6,14 @@ import { Motion } from "../../Elements/Motion";
 import { Video } from "../../Elements/Video";
 
 // type: 0/false = video, 1/true = image
-export const Hero = ({ type, video, image, quote, scrollTarget }) => {
+export const Hero = ({
+  type,
+  video,
+  image,
+  quote,
+  scrollTarget,
+  scrollTargetClassname,
+}) => {
   const src = type ? image : video;
   return (
     <div className="w-full h-[95dvh] relative">
@@ -53,7 +60,10 @@ export const Hero = ({ type, video, image, quote, scrollTarget }) => {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: "-50%" }}
         >
-          <ScrollTarget target={scrollTarget ? scrollTarget : ""} />
+          <ScrollTarget
+            target={scrollTarget ? scrollTarget : ""}
+            className={scrollTargetClassname}
+          />
         </Motion>
       </div>
     </div>

@@ -27,7 +27,7 @@ export const Home = () => {
     <>
       <section className="w-full px-2 pt-2 mb-16 sm:px-4">
         <div className="max-w-[1440px] mx-auto grid gap-4 sm:grid-cols-[minmax(100px,_1fr)_260px] grid-cols-1">
-          <Hero />
+          <Hero scrollTargetClassname="hidden sm:flex" />
 
           <div className="grid grid-rows-[minmax(200px,auto)_minmax(200px,1fr)_minmax(0,1fr)] w-full sm:h-[95dvh] gap-2">
             <MotionInView
