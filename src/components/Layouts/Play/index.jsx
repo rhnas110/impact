@@ -1,5 +1,5 @@
-import { Link } from "react-router-dom";
 import play from "../../../assets/play.jpg";
+import { Link } from "react-router-dom";
 import { Next } from "../../Elements/Button/next";
 import { Image } from "../../Elements/Image";
 import { ParallaxY } from "../../Elements/Parallax";

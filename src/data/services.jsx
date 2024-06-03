@@ -25,31 +25,37 @@ export const services = [
     title: "Explore",
     image: explore,
     bg: "bg-[#C8615A]",
+    link: "/services",
   },
   {
     title: "Play",
     image: play,
     bg: "bg-[#B1653B]",
+    link: "/services",
   },
   {
     title: "Fun",
     image: fun,
     bg: "bg-[#77A3AB]",
+    link: "/services",
   },
   {
     title: "Memories",
     image: memories,
     bg: "bg-[#5757A5]",
+    link: "/services",
   },
   {
     title: "Chill",
     image: chill,
     bg: "bg-[#FFBB22]",
+    link: "/services",
   },
   {
     title: "Mission",
     image: mission,
     bg: "bg-[#513C3E]",
+    link: "/services",
   },
 ];
 

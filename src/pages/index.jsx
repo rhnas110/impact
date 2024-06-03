@@ -2,6 +2,7 @@ import SEO from "../components/SEO";
 import { NotFound } from "./404";
 import { Home } from "./Home";
 import { Services } from "./Services";
+import { OurPrinciples } from "./OurPrinciples";
 
 // custom title
 function Page({ children }) {
@@ -27,6 +28,17 @@ function ServicesPage() {
     </Page>
   );
 }
+function OurPrinciplesPage() {
+  return (
+    <Page>
+      <SEO
+        title="Our Principles - impact."
+        description="Discover the guiding principles of impact., fostering sustainability, collaboration, inclusivity, and fun for the Genshin Impact community."
+      />
+      <OurPrinciples />
+    </Page>
+  );
+}
 
 function NotFoundPage() {
   return (
@@ -37,4 +49,4 @@ function NotFoundPage() {
   );
 }
 
-export { HomePage, ServicesPage, NotFoundPage };
+export { HomePage, ServicesPage, OurPrinciplesPage, NotFoundPage };

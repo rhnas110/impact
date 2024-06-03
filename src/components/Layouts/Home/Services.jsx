@@ -1,7 +1,6 @@
 // Import Swiper React components
 import { SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
-
 import { Link } from "react-router-dom";
 
 import { breakpoints } from "../../../config/swiper.config";
@@ -55,7 +54,7 @@ export const Services = () => {
           {services?.map((service, index) => {
             return (
               <SwiperSlide key={index}>
-                <Link>
+                <Link to={service.link}>
                   <div
                     className={`h-48 ${service.bg} w-80 rounded-[2rem] flex items-center justify-center relative group hover:-translate-y-2 transition duration-300`}
                   >

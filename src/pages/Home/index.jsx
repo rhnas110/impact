@@ -6,7 +6,9 @@ export const Home = () => {
   return (
     <>
       <Navbar />
-      <HomeLayouts />
+      <main>
+        <HomeLayouts />
+      </main>
       <Footer />
     </>
   );

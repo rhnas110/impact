@@ -8,6 +8,8 @@ export default {
       },
     },
     screens: {
+      "2xs": "320px",
+      xs: "480px",
       sm: "640px",
       // => @media (min-width: 640px) { ... }
 

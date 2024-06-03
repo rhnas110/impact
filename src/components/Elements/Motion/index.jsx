@@ -1,6 +1,6 @@
-import { motion } from "../../../utils/motion";
 import { transition } from "../../../config/transition.config";
 import { cn } from "../../../utils";
+import { motion } from "../../../utils/motion";
 
 export const Motion = ({ children, className, ...props }) => {
   return (

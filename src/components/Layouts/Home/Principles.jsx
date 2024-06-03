@@ -57,7 +57,7 @@ export const Principles = () => {
             amount={1}
             className="w-auto h-auto"
           >
-            <a href="#" className="flex items-center gap-2 group">
+            <a href="/our-principles" className="flex items-center gap-2 group">
               <p className="text-[#E1ABA3] bg-[#282350] rounded-3xl py-0.5 px-4 text-lg">
                 Our Principles
               </p>

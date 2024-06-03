@@ -1,7 +1,7 @@
-import { Socials } from "../Navbar/socials";
 import { cn } from "../../../utils";
 import { navLinks } from "../../../data/navbar";
 import { LogoPlain } from "../../Elements/Logo";
+import { Socials } from "../Navbar/socials";
 export const Footer = ({ className }) => {
   return (
     <footer className="w-full px-2 my-4 sm:px-4">

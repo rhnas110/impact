@@ -1,25 +1,36 @@
-function getWidth() {
+function getWindowWidth() {
   return Math.max(
-    document.body.scrollWidth,
-    document.documentElement.scrollWidth,
-    document.body.offsetWidth,
-    document.documentElement.offsetWidth,
-    document.documentElement.clientWidth
+    document.documentElement.clientWidth || 0,
+    window.innerWidth || 0
   );
 }
 
-function getHeight() {
+function getWindowHeight() {
   return Math.max(
-    document.body.scrollHeight,
-    document.documentElement.scrollHeight,
-    document.body.offsetHeight,
-    document.documentElement.offsetHeight,
-    document.documentElement.clientHeight
+    document.documentElement.clientHeight || 0,
+    window.innerHeight || 0
   );
 }
 
-const Mobile = getWidth() < 768;
-const Tablet = getWidth() < 1024;
-const Desktop = getWidth() >= 1024;
+const width = getWindowWidth();
+const height = getWindowHeight();
 
-export { getHeight, getWidth, Mobile, Tablet, Desktop };
+const MobileXs = width < 375 && width >= 0;
+const MobileSm = width < 480 && width >= 375;
+const MobileMd = width < 640 && width >= 480;
+const MobileLg = width < 768 && width >= 640;
+const Mobile = width < 768;
+const Tablet = width < 1024 && width >= 768;
+const Desktop = width >= 1024;
+
+export {
+  getWindowHeight,
+  getWindowWidth,
+  MobileXs,
+  MobileSm,
+  MobileMd,
+  MobileLg,
+  Mobile,
+  Tablet,
+  Desktop,
+};
