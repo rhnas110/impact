@@ -1,14 +1,14 @@
+import { Link } from "react-router-dom";
 // Import Swiper React components
 import { SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
-import { Link } from "react-router-dom";
 
-import { breakpoints } from "../../../config/swiper.config";
-import { services } from "../../../data/services";
-import { Slider } from "../../Elements/Swiper";
-import { Next } from "../../Elements/Button/next";
-import { MotionInView } from "../../Elements/Motion";
-import { Image } from "../../Elements/Image";
+import { Next } from "../../../Elements/Button/next";
+import { MotionInView } from "../../../Elements/Motion";
+import { Image } from "../../../Elements/Image";
+import { Slider } from "../../../Elements/Swiper";
+import { breakpoints } from "../../../../config/swiper.config";
+import { services } from "../../../../data/services";
 
 export const Services = () => {
   return (
@@ -18,10 +18,10 @@ export const Services = () => {
           initial={{ opacity: 0, x: "-15%" }}
           whileInView={{ opacity: 1, x: "0" }}
         >
-          <p className="w-full leading-none h1 lg:w-[60%] py-20">
+          <h1 className="w-full leading-none h1 lg:w-[60%] py-20">
             We Play, Explore, Create Memories Dive Deep into Teyvat&#39;s
             Wonders with impact.
-          </p>
+          </h1>
         </MotionInView>
         <MotionInView
           initial={{ opacity: 0, y: "-100%" }}

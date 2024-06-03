@@ -1,7 +1,7 @@
-import rs from "../../../assets/Home/Principles/rs.gif";
 import { GrLinkNext } from "react-icons/gr";
-import { MotionInView } from "../../Elements/Motion";
-import { Image } from "../../Elements/Image";
+import rs from "../../../../assets/Home/Principles/rs.gif";
+import { Image } from "../../../Elements/Image";
+import { MotionInView } from "../../../Elements/Motion";
 
 const principles = [
   {
@@ -25,7 +25,6 @@ const principles = [
     className: "",
   },
 ];
-
 export const Principles = () => {
   return (
     <section className="w-full h-[85dvh] px-2 my-24 sm:px-4">

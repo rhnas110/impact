@@ -42,3 +42,18 @@ export const MotionImage = ({ src, alt, lazy, className, ...props }) => {
     />
   );
 };
+
+export const MotionParallax = ({ src, alt, lazy, translateY, className }) => {
+  return (
+    <motion.img
+      src={src}
+      alt={alt}
+      loading={lazy ? "lazy" : "eager"}
+      style={{ translateY: translateY }}
+      className={cn(
+        "object-cover object-center w-full h-[110%] bg-[#BED2F5]",
+        className
+      )}
+    />
+  );
+};

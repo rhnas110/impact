@@ -1,11 +1,11 @@
 import "./styles.css";
-import explore1 from "../../../../assets/Home/Explore/explore-1.jpeg";
-import explore2 from "../../../../assets/Home/Explore/explore-2.jpg";
-import explore3 from "../../../../assets/Home/Explore/explore-3.jpg";
-import explore4 from "../../../../assets/Home/Explore/explore-4.jpg";
+import explore1 from "../../../../../assets/Home/Explore/explore-1.jpeg";
+import explore2 from "../../../../../assets/Home/Explore/explore-2.jpg";
+import explore3 from "../../../../../assets/Home/Explore/explore-3.jpg";
+import explore4 from "../../../../../assets/Home/Explore/explore-4.jpg";
 
-import { Link } from "react-router-dom";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { SwiperSlide } from "swiper/react";
 // Import Swiper styles
 import "swiper/css/pagination";
@@ -13,12 +13,12 @@ import "swiper/css/pagination";
 import { Autoplay, Pagination } from "swiper/modules";
 
 import { Map } from "./Map";
-import { Slider } from "../../../Elements/Swiper";
-import { Next } from "../../../Elements/Button/next";
-import { MotionInView } from "../../../Elements/Motion";
-import { Image } from "../../../Elements/Image";
+import { Next } from "../../../../Elements/Button/next";
+import { Image } from "../../../../Elements/Image";
+import { MotionInView } from "../../../../Elements/Motion";
+import { Slider } from "../../../../Elements/Swiper";
 
-import { Mobile } from "../../../../utils/screen";
+import { Mobile } from "../../../../../utils/screen";
 
 const explore = [
   {

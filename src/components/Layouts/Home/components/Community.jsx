@@ -1,10 +1,10 @@
-import com1 from "../../../assets/Home/Community/com-1.jpg";
-import com2 from "../../../assets/Home/Community/com-2.jpg";
-import com3 from "../../../assets/Home/Community/com-3.jpg";
-
 import { Link } from "react-router-dom";
-import { Next } from "../../Elements/Button/next";
-import { MotionImage, MotionInView } from "../../Elements/Motion";
+import com1 from "../../../../assets/Home/Community/com-1.jpg";
+import com2 from "../../../../assets/Home/Community/com-2.jpg";
+import com3 from "../../../../assets/Home/Community/com-3.jpg";
+
+import { Next } from "../../../Elements/Button/next";
+import { MotionImage, MotionInView } from "../../../Elements/Motion";
 
 const community = [
   {
@@ -29,7 +29,6 @@ const community = [
     desc: "With its stunning visuals, captivating soundtrack, and epic cutscenes, Genshin Impact offers players a cinematic gaming experience like no other.",
   },
 ];
-
 export const Community = () => {
   return (
     <section className="w-full">
@@ -38,9 +37,9 @@ export const Community = () => {
           initial={{ opacity: 0, x: "-15%" }}
           whileInView={{ opacity: 1, x: "0" }}
         >
-          <p className="w-full leading-none h1 lg:w-9/12 xl:w-[60%]">
+          <h1 className="w-full leading-none h1 lg:w-9/12 xl:w-[60%]">
             A lovely community, exploring Genshin Impact with love and impact.
-          </p>
+          </h1>
         </MotionInView>
 
         <div className="flex flex-col gap-8 my-12 xl:my-24 xl:gap-24 xl:flex-row">
