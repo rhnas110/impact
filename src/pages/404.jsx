@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
-import { Image } from "../components/Elements/Image";
-import { Motion } from "../components/Elements/Motion";
 import notfoundImage from "../assets/404.png";
 import s from "../assets/s.png";
+import { Image } from "../components/Elements/Image";
+import { Motion } from "../components/Elements/Motion";
 export const NotFound = () => {
   return (
     <main className="flex items-center justify-center w-full bg-[#393b40] h-dvh overflow-hidden">

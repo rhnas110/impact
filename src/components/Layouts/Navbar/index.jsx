@@ -3,14 +3,12 @@ import { useState } from "react";
 
 import { Logo } from "../../Elements/Logo";
 import { Search } from "../../Elements/Search";
+import { HeaderMobile } from "./headerMobile";
 import { Socials } from "./socials";
 
+import { navLinks } from "../../../data/navbar";
 import { cn } from "../../../utils";
 import { scrollTo } from "../../../utils/scroll";
-
-import { navLinks } from "../../../data/navbar";
-import { HeaderMobile } from "./headerMobile";
-
 export const Navbar = () => {
   const [openMenu, setOpenMenu] = useState(false);
 

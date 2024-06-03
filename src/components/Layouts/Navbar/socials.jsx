@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
-import { cn } from "../../../utils";
 import { socialsMenu } from "../../../data/social";
-
+import { cn } from "../../../utils";
 export const Socials = ({ className }) => {
   return (
     <ul className={cn(`flex gap-x-2`, className)}>

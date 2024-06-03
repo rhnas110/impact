@@ -1,6 +1,5 @@
 import { Parallax } from "react-scroll-parallax";
 import { cn } from "../../../utils";
-
 export const ParallaxY = ({ children, fromY, toY, className, ...props }) => {
   return (
     <Parallax

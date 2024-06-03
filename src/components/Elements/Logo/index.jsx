@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import { scrollTo } from "../../../utils/scroll";
-
 export const Logo = () => {
   return (
     <h1 className="relative p-2 text-4xl lg:p-4 bg-light rounded-br-3xl">

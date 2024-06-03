@@ -4,7 +4,6 @@ import { GrLinkNext } from "react-icons/gr";
 import { Next } from "../../../../Elements/Button/next";
 import { Image } from "../../../../Elements/Image";
 import { motion, useScroll, useTransform } from "../../../../../utils/motion";
-
 const Card = ({ data, i, progress, range, targetScale }) => {
   const { title, description, src, link, color, bg } = data;
   const container = useRef(null);

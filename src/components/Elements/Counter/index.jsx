@@ -1,7 +1,6 @@
 import { useInView } from "react-intersection-observer";
 import CountUp from "react-countup";
 import { cn } from "../../../utils";
-
 const Counter = ({
   target,
   title,

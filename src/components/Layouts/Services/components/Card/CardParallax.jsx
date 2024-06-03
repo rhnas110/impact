@@ -4,7 +4,6 @@ import { cards } from "../../../../../data/services";
 import { cn } from "../../../../../utils";
 import { useScroll } from "../../../../../utils/motion";
 import Card from ".";
-
 export const CardParallax = () => {
   const [activeCard, setActiveCard] = useState(1); // default card id is 1
   const container = useRef(null);

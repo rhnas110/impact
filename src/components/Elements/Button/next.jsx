@@ -1,6 +1,5 @@
 import { GrLinkNext } from "react-icons/gr";
 import { cn } from "../../../utils";
-
 export const Next = ({ className }) => {
   return (
     <div

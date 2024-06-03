@@ -1,11 +1,10 @@
-import defaultImage from "../../../assets/Contact/default.gif";
 import { GrLinkNext } from "react-icons/gr";
+import defaultImage from "../../../assets/Contact/default.gif";
+import { Image } from "../../Elements/Image";
+import { MotionInView } from "../../Elements/Motion";
+
 import { cn } from "../../../utils";
 import { Mobile } from "../../../utils/screen";
-
-import { MotionInView } from "../../Elements/Motion";
-import { Image } from "../../Elements/Image";
-
 export const CardContact = ({ image, className }) => {
   return (
     <section className="w-full px-2 sm:px-4">

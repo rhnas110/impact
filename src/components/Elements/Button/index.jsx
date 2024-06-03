@@ -1,6 +1,5 @@
 import { GrLinkNext } from "react-icons/gr";
 import { scrollTarget } from "../../../utils/scroll";
-
 export const ScrollTarget = ({ target }) => {
   return (
     <button

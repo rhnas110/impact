@@ -1,5 +1,4 @@
 import { cn } from "../../../utils";
-
 export const Badge = ({ text, className = "" }) => {
   return (
     <span

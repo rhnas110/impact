@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 
 import { FullSearch } from "../../Elements/Search";
-import { motion } from "../../../utils/motion";
 import { navLinks } from "../../../data/navbar";
+import { motion } from "../../../utils/motion";
 
 const modalVariants = {
   hidden: {

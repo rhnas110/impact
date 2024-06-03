@@ -1,4 +1,6 @@
 import { Route, Routes } from "react-router-dom";
+import useLenis from "./hooks/useLenis";
+import { AnimatePresence } from "./utils/motion";
 
 import {
   HomePage,
@@ -6,8 +8,6 @@ import {
   OurPrinciplesPage,
   NotFoundPage,
 } from "./pages";
-import useLenis from "./hooks/useLenis";
-import { AnimatePresence } from "./utils/motion";
 
 function App() {
   useLenis();
