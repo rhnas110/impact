@@ -96,7 +96,7 @@ export const Explore = () => {
               onSlideChangeTransitionEnd={function (swipe) {
                 setActiveIndex(swipe.realIndex);
               }}
-              className="h-full relative w-full rounded-b-[2rem] sm:rounded-[2rem] overflow-hidden bg-[#A8C3F2] sm:bg-[#EAF1FC]"
+              className="h-full pb-6 sm:pb-8 relative w-full rounded-b-[2rem] sm:rounded-[2rem] overflow-hidden bg-[#A8C3F2] sm:bg-[#EAF1FC]"
             >
               {explore.map((item, index) => (
                 <SwiperSlide
@@ -106,8 +106,10 @@ export const Explore = () => {
                   <p className="px-4 py-1 border-2 border-black w-min rounded-3xl">
                     {item.category}
                   </p>
-                  <p className="text-xl font-bold sm:text-3xl">{item.title}</p>
-                  <p className="sm:text-lg">{item.desc}</p>
+                  <p className="text-xl font-bold leading-none sm:leading-none sm:text-3xl">
+                    {item.title}
+                  </p>
+                  <p className="sm:leading-tight sm:text-lg">{item.desc}</p>
                 </SwiperSlide>
               ))}
 
