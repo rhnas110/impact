@@ -11,7 +11,7 @@ export const Search = () => {
     <div className="relative flex items-center">
       <div
         className={cn(
-          "w-[300px] h-14 rounded-full overflow-hidden backdrop-blur-lg shadow-lg transform-gpu transition duration-500 origin-[100%_50%]",
+          "w-[280px] h-14 rounded-full overflow-hidden backdrop-blur-lg shadow-lg transform-gpu transition duration-500 origin-[100%_50%]",
           open ? "scale-100 opacity-100" : "scale-0 opacity-0"
         )}
       >
