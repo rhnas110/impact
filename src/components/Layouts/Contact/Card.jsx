@@ -1,24 +1,30 @@
 import { GrLinkNext } from "react-icons/gr";
 import defaultImage from "../../../assets/Contact/default.gif";
-import { Image } from "../../Elements/Image";
-import { MotionInView } from "../../Elements/Motion";
+import { MotionInView, MotionParallax } from "../../Elements/Motion";
 
 import { cn } from "../../../utils";
 import { Mobile } from "../../../utils/screen";
-export const CardContact = ({ image, className }) => {
+import { useMotionParallax } from "../../../hooks/useMotionParallax";
+export const CardContact = ({ image, className, motionParallaxClassname }) => {
+  const { containerRef, translateY } = useMotionParallax();
   return (
     <section className="w-full px-2 sm:px-4">
       <div className="max-w-[1440px] max-h-min mx-auto grid gap-4 sm:grid-cols-[minmax(0,40%)_minmax(0,1fr)]">
-        <div className="aspect-video w-full sm:min-h-[300px] sm:h-[460px] rounded-[2rem] overflow-hidden">
+        <div
+          className="aspect-video w-full sm:min-h-[300px] sm:h-[460px] rounded-[2rem] overflow-hidden"
+          ref={containerRef}
+        >
           <MotionInView
             initial={{ opacity: 0, x: Mobile ? "0" : "-15%" }}
             whileInView={{ opacity: 1, x: "0" }}
             className="overflow-hidden"
           >
-            <Image
+            <MotionParallax
               src={image ? image : defaultImage}
               alt="Contact Image"
               lazy
+              translateY={translateY}
+              className={motionParallaxClassname}
             />
           </MotionInView>
         </div>

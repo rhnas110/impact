@@ -12,7 +12,7 @@ export const Home = () => {
       <Principles />
       <Explore />
       <Community />
-      <CardContact />
+      <CardContact motionParallaxClassname="h-[115%]" />
     </>
   );
 };

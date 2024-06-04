@@ -12,7 +12,11 @@ export const Services = () => {
       <CardParallax />
       <Heading />
       <Why />
-      <CardContact image={contact} className="bg-[#4F70EA]" />
+      <CardContact
+        image={contact}
+        className="bg-[#4F70EA]"
+        motionParallaxClassname="h-[115%]"
+      />
     </>
   );
 };
