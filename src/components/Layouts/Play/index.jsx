@@ -6,7 +6,7 @@ import { useMotionParallax } from "../../../hooks/useMotionParallax";
 export const Play = () => {
   const { containerRef, translateY } = useMotionParallax(
     ["end start", "start end"],
-    ["-10%", "-30%"]
+    ["0%", "-30%"]
   );
   return (
     <Link
