@@ -29,11 +29,11 @@ const Card = ({ data, i, progress, range, targetScale }) => {
         >
           <Image src={src} alt={title} lazy />
         </motion.div>
-        <div className="flex flex-col w-full gap-6 overflow-y-scroll lg:overflow-y-hidden scrollbar-hide h-2/5 sm:h-1/2 lg:h-full">
-          <h3 className="font-bold leading-none h3">{title}</h3>
-          <h4 className={`font-bold leading-none h4 ${color}`}>
+        <div className="flex flex-col w-full gap-6 overflow-y-scroll lg:py-4 lg:overflow-y-hidden scrollbar-hide h-2/5 sm:h-1/2 lg:h-full">
+          <h4 className="font-bold leading-none h4">{title}</h4>
+          <h5 className={`font-bold leading-none h5 ${color}`}>
             {description}
-          </h4>
+          </h5>
           <>
             <a href={link} className="items-center hidden gap-2 group lg:flex">
               <p className="text-lg">Learn More</p>
