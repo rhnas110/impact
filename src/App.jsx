@@ -6,6 +6,7 @@ import {
   HomePage,
   ServicesPage,
   OurPrinciplesPage,
+  ContactPage,
   NotFoundPage,
 } from "./pages";
 
@@ -17,6 +18,7 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/services" element={<ServicesPage />} />
         <Route path="/our-principles" element={<OurPrinciplesPage />} />
+        <Route path="/contact" element={<ContactPage />} />
         <Route
           path="/helloworld"
           element={

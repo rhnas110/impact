@@ -1,7 +1,7 @@
 import { GrLinkNext } from "react-icons/gr";
 import { cn } from "../../../utils";
 import { scrollTarget } from "../../../utils/scroll";
-export const ScrollTarget = ({ target, className }) => {
+export const ScrollTarget = ({ target, className, color = "text-black" }) => {
   return (
     <button
       className={cn(
@@ -12,7 +12,7 @@ export const ScrollTarget = ({ target, className }) => {
     >
       <GrLinkNext
         size={20}
-        className="text-black transition duration-300 rotate-90 group-hover:scale-125"
+        className={`${color} transition duration-300 rotate-90 group-hover:scale-125`}
       />
     </button>
   );

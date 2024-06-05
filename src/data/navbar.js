@@ -3,5 +3,5 @@ export const navLinks = [
   { title: "About", url: "#" },
   { title: "Our Principles", url: "/our-principles" },
   { title: "Community", url: "#" },
-  { title: "Contact", url: "#" },
+  { title: "Contact", url: "/contact" },
 ];

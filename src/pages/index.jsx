@@ -3,6 +3,7 @@ import { NotFound } from "./404";
 import { Home } from "./Home";
 import { Services } from "./Services";
 import { OurPrinciples } from "./OurPrinciples";
+import { Contact } from "./Contact";
 
 // custom title
 function Page({ children }) {
@@ -39,6 +40,14 @@ function OurPrinciplesPage() {
     </Page>
   );
 }
+function ContactPage() {
+  return (
+    <Page>
+      <SEO title="Contact - impact." />
+      <Contact />
+    </Page>
+  );
+}
 
 function NotFoundPage() {
   return (
@@ -49,4 +58,4 @@ function NotFoundPage() {
   );
 }
 
-export { HomePage, ServicesPage, OurPrinciplesPage, NotFoundPage };
+export { HomePage, ServicesPage, OurPrinciplesPage, ContactPage, NotFoundPage };
