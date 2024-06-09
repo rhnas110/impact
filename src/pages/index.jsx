@@ -33,7 +33,10 @@ function ServicesPage() {
 function AboutPage() {
   return (
     <Page>
-      <SEO title="About - impact." />
+      <SEO
+        title="About - impact."
+        description="Learn more about impact., the vibrant community hub for Genshin Impact players. Discover our mission, vision, and the passionate team behind our community-driven platform."
+      />
       <About />
     </Page>
   );
