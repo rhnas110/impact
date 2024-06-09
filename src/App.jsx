@@ -5,6 +5,7 @@ import { AnimatePresence } from "./utils/motion";
 import {
   HomePage,
   ServicesPage,
+  AboutPage,
   OurPrinciplesPage,
   ContactPage,
   NotFoundPage,
@@ -17,6 +18,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/services" element={<ServicesPage />} />
+        <Route path="/about" element={<AboutPage />} />
         <Route path="/our-principles" element={<OurPrinciplesPage />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route

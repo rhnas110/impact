@@ -2,6 +2,7 @@ import SEO from "../components/SEO";
 import { NotFound } from "./404";
 import { Home } from "./Home";
 import { Services } from "./Services";
+import { About } from "./About";
 import { OurPrinciples } from "./OurPrinciples";
 import { Contact } from "./Contact";
 
@@ -26,6 +27,14 @@ function ServicesPage() {
         description="Discover the wide range of services offered by impact., the ultimate destination for Genshin Impact enthusiasts! From community discussions to in-depth guides, we've got everything you need."
       />
       <Services />
+    </Page>
+  );
+}
+function AboutPage() {
+  return (
+    <Page>
+      <SEO title="About - impact." />
+      <About />
     </Page>
   );
 }
@@ -58,4 +67,11 @@ function NotFoundPage() {
   );
 }
 
-export { HomePage, ServicesPage, OurPrinciplesPage, ContactPage, NotFoundPage };
+export {
+  HomePage,
+  ServicesPage,
+  AboutPage,
+  OurPrinciplesPage,
+  ContactPage,
+  NotFoundPage,
+};
