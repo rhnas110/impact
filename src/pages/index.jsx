@@ -55,7 +55,10 @@ function OurPrinciplesPage() {
 function ContactPage() {
   return (
     <Page>
-      <SEO title="Contact - impact." />
+      <SEO
+        title="Contact - impact."
+        description="Get in touch with impact., the ultimate Genshin Impact community. Whether you have questions, feedback, or just want to connect, we're here to help. Reach out to us today!"
+      />
       <Contact />
     </Page>
   );
