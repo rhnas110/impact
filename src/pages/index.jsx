@@ -56,7 +56,10 @@ function OurPrinciplesPage() {
 function CommunityPage() {
   return (
     <Page>
-      <SEO title="Community - impact." />
+      <SEO
+        title="Community - impact."
+        description="Join the impact. community and connect with Genshin Impact enthusiasts! Explore, share, and discuss the latest tips, strategies, and experiences with fellow adventurers."
+      />
       <Community />
     </Page>
   );
