@@ -7,7 +7,7 @@ export const Socials = ({ className }) => {
       {socialsMenu.map((social, index) => {
         return (
           <li key={index} className="hover:text-gray-600">
-            <Link href={social.path} target="_blank" rel="noopener noreferrer">
+            <Link to={social.path} target="_blank" rel="noopener noreferrer">
               {social.icon}
             </Link>
           </li>

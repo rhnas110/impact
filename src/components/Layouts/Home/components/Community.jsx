@@ -56,7 +56,8 @@ export const Community = () => {
             {community.map((item, index) => {
               return (
                 <Link
-                  to="#"
+                  to="/community"
+                  target="_blank"
                   key={index}
                   className="transition duration-300 group hover:-translate-y-2"
                 >

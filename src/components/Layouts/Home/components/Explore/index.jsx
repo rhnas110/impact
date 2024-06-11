@@ -112,7 +112,11 @@ export const Explore = () => {
                 </SwiperSlide>
               ))}
 
-              <Link to="#" className="absolute bottom-0 right-0 z-10 group">
+              <Link
+                to="/community"
+                target="_blank"
+                className="absolute bottom-0 right-0 z-10 group"
+              >
                 <Next />
               </Link>
             </Slider>

@@ -11,15 +11,21 @@ export const Footer = ({ className }) => {
           className
         )}
       >
-        <div>
+        <div className="flex flex-col justify-between">
           <h5 className="leading-none h5 lg:w-9/12 md:w-10/12">
-            <p>
-              impact. is your gateway to the enchanting universe of Genshin
-              Impact. Explore Teyvat&#39;s breathtaking landscapes, connect with
-              friends, and uncover mysteries. Welcome to impact, where your
-              journey begins.
-            </p>
+            impact. is your gateway to the enchanting universe of Genshin
+            Impact. Explore Teyvat&#39;s breathtaking landscapes, connect with
+            friends, and uncover mysteries. Welcome to impact, where your
+            journey begins.
           </h5>
+          <div className="hidden sm:block">
+            <p>Website by</p>
+            <a href="https://bit.ly/aeseportofolio" target="_blank">
+              <h5 className="italic leading-none hover:underline h5">
+                aese.dev
+              </h5>
+            </a>
+          </div>
         </div>
         <div className="flex flex-col justify-between gap-12 sm:gap-0">
           <div className="flex flex-col gap-8">
@@ -69,8 +75,16 @@ export const Footer = ({ className }) => {
             </div>
           </div>
           <div className="flex flex-col gap-4 sm:gap-0 sm:items-center sm:flex-row sm:justify-between">
-            <div className="order-2 sm:order-1">
+            <div className="flex justify-between order-2 sm:order-1">
               <LogoPlain />
+              <div className="sm:hidden">
+                <p>Website by</p>
+                <a href="https://bit.ly/aeseportofolio" target="_blank">
+                  <h5 className="italic leading-none hover:underline h5">
+                    aese.dev
+                  </h5>
+                </a>
+              </div>
             </div>
             <Socials className="order-1 sm:order-2" />
           </div>

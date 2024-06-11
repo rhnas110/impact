@@ -20,7 +20,8 @@ export const Map = () => {
   return (
     <div className="grid w-full grid-cols-1 gap-2 sm:grid-cols-2 sm:grid-rows-2">
       <Link
-        to="#"
+        to="/our-principles"
+        target="_blank"
         className="sm:row-span-2 group w-full sm:h-[460px] rounded-[2rem] overflow-hidden relative"
       >
         <MotionInView
@@ -42,7 +43,8 @@ export const Map = () => {
       </Link>
 
       <Link
-        to="#"
+        to="/services"
+        target="_blank"
         className="group w-full sm:h-[230px] rounded-[2rem] overflow-hidden relative"
         ref={map2Parallax.containerRef}
       >
@@ -66,7 +68,8 @@ export const Map = () => {
       </Link>
 
       <Link
-        to="#"
+        to="/contact"
+        target="_blank"
         className="sm:col-start-2 group w-full sm:h-[230px] rounded-[2rem] overflow-hidden relative"
         ref={map3Parallax.containerRef}
       >

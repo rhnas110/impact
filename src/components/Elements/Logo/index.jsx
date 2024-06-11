@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { cn } from "../../../utils";
 import { scrollTo } from "../../../utils/scroll";
 export const Logo = () => {
   return (
@@ -24,9 +25,9 @@ export const Logo = () => {
   );
 };
 
-export const LogoPlain = () => {
+export const LogoPlain = ({ className }) => {
   return (
-    <h1 className="order-2 text-4xl sm:order-1">
+    <h1 className={cn("text-4xl", className)}>
       <Link to="/" onClick={() => scrollTo(0, 0)}>
         impact.
       </Link>

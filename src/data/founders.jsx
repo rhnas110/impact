@@ -17,18 +17,17 @@ export const founders = [
   },
   {
     id: 2,
-    name: "cat.dev",
+    name: "aese.dev",
     role: "CTO",
     image:
       "https://usagif.com/wp-content/uploads/gify/xiao-cat-2-genshin-impact-usagif.gif",
     desc: (
       <>
         I love sleep, I love love love sleep, I want to sleep, I want to sleep,
-        I want to Sleep. You know why my name is cat.dev? Because I like cats
-        too and I want to be a cat. I want to be a cat, cats have a wonderful
-        life, almost 100% of the time and everywhere cats sleep. If I could, I
-        would sleep all day like a cat. That&#39;s a life of relaxing and
-        dreaming.
+        I want to Sleep. I love Sleep and I love cats. I want to be a cat, cats
+        have a wonderful life, almost 100% of the time and everywhere cats
+        sleep. If I could, I would sleep all day like a cat. That&#39;s a life
+        of relaxing and dreaming.
       </>
     ),
   },

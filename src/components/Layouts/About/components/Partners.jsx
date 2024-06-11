@@ -79,14 +79,14 @@ export const Partners = () => {
         {partners.map(({ id, image }) => {
           return (
             <MotionInView
-              className="overflow-hidden aspect-square max-w-[250px] flex-shrink-0 lg:flex-shrink"
+              className="overflow-hidden aspect-square max-w-[250px] flex-shrink-0 lg:flex-shrink lg:saturate-0 lg:hover:saturate-100"
               key={id}
               initial={{ opacity: Mobile ? 1 : 0 }}
               whileInView={{ opacity: 1 }}
               transition={{ ...transition, delay: 0.1 * id }}
             >
               <MotionImage
-                className="object-contain bg-transparent"
+                className="object-contain bg-transparent lg:cursor-pointer"
                 src={image}
                 alt={"wibu" + id}
                 lazy
@@ -117,14 +117,14 @@ export const Partners = () => {
         {group.map(({ id, image }) => {
           return (
             <MotionInView
-              className="overflow-hidden aspect-square max-w-[225px] flex-shrink-0 lg:flex-shrink"
+              className="overflow-hidden aspect-square max-w-[225px] flex-shrink-0 lg:flex-shrink lg:saturate-0 lg:hover:saturate-100"
               key={id}
               initial={{ opacity: Mobile ? 1 : 0 }}
               whileInView={{ opacity: 1 }}
               transition={{ ...transition, delay: 0.1 * id }}
             >
               <MotionImage
-                className="object-contain bg-transparent"
+                className="object-contain bg-transparent lg:cursor-pointer"
                 src={image}
                 alt={"wibu" + id}
                 lazy

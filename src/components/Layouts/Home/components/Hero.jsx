@@ -117,7 +117,10 @@ export const Hero = () => {
                   <span className="text-[#d9db4d]">impact.</span>
                 </h5>
               </SwiperSlide>
-              <Link to="#" className="absolute bottom-0 right-0 z-10 group">
+              <Link
+                to="/community"
+                className="absolute bottom-0 right-0 z-10 group"
+              >
                 <Next />
               </Link>
             </Slider>
