@@ -2,6 +2,7 @@ import { ScrollTarget } from "../../../Elements/Button";
 import { Motion, MotionParallax } from "../../../Elements/Motion";
 import { useMotionParallax } from "../../../../hooks/useMotionParallax";
 import { MobileXs } from "../../../../utils/screen";
+import { scrollTarget } from "../../../../utils/scroll";
 export const Hero = () => {
   const { containerRef, translateY } = useMotionParallax(
     ["end start", "start end"],
@@ -37,7 +38,10 @@ export const Hero = () => {
             <path d="m100,0H0v100C0,44.77,44.77,0,100,0Z" fill="#F9F8F6"></path>
           </svg>
           <div className="grid grid-cols-2 gap-x-2">
-            <div className="bg-[#2A2C2D] rounded-[2rem] py-4 xs:py-8 px-4 flex items-center justify-center text-gray-300 text-lg gap-x-4">
+            <div
+              className="bg-[#2A2C2D] rounded-[2rem] py-4 xs:py-8 px-4 flex items-center justify-center text-gray-300 text-lg gap-x-4 group cursor-pointer"
+              onClick={() => scrollTarget("message")}
+            >
               {MobileXs ? <p>Message</p> : <p>Drop us a message</p>}
               <ScrollTarget
                 target="message"
@@ -45,7 +49,10 @@ export const Hero = () => {
                 color="text-light"
               />
             </div>
-            <div className="bg-[#E5E5E5] rounded-[2rem] py-4 xs:py-8 px-8 flex items-center justify-between text-lg gap-x-4">
+            <div
+              className="bg-[#E5E5E5] rounded-[2rem] py-4 xs:py-8 px-8 flex items-center justify-between text-lg gap-x-4 group cursor-pointer"
+              onClick={() => scrollTarget("faq")}
+            >
               {MobileXs ? <p>FAQs</p> : <p>View FAQs</p>}
               <ScrollTarget
                 target="faq"
