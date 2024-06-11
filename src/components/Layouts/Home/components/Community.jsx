@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
-import com1 from "../../../../assets/Home/Community/com-1.jpg";
-import com2 from "../../../../assets/Home/Community/com-2.jpg";
-import com3 from "../../../../assets/Home/Community/com-3.jpg";
+import com1 from "../../../../assets/Community/com-1.jpg";
+import com2 from "../../../../assets/Community/com-2.jpg";
+import com3 from "../../../../assets/Community/com-3.jpg";
 
 import { Next } from "../../../Elements/Button/next";
 import { MotionImage, MotionInView } from "../../../Elements/Motion";
@@ -16,7 +16,7 @@ const community = [
   },
   {
     image: com2,
-    category: "Misson",
+    category: "Mission",
     bgCategory: "bg-[#B1653B]",
     title: "Teyvat Wanderers Union",
     desc: "A welcoming space for Genshin Impact fans. Discuss updates, theories, and lore. Join events and make lasting friendships here!",
@@ -56,13 +56,14 @@ export const Community = () => {
             {community.map((item, index) => {
               return (
                 <Link
-                  className="flex flex-col gap-4 transition duration-300 group hover:-translate-y-2"
                   to="#"
                   key={index}
+                  className="transition duration-300 group hover:-translate-y-2"
                 >
                   <MotionInView
                     initial={{ opacity: 0, y: "-5%" }}
                     whileInView={{ opacity: 1, y: "0" }}
+                    className="flex flex-col gap-4"
                   >
                     <div className="xl:aspect-square aspect-[3/2] overflow-hidden rounded-[2rem] relative">
                       <span
@@ -86,7 +87,7 @@ export const Community = () => {
                     <p className="text-xl font-bold sm:text-3xl">
                       {item.title}
                     </p>
-                    <p className="sm:text-lg">{item.desc}</p>
+                    <p className="sm:text-lg sm:leading-tight">{item.desc}</p>
                   </MotionInView>
                 </Link>
               );

@@ -7,6 +7,7 @@ import {
   ServicesPage,
   AboutPage,
   OurPrinciplesPage,
+  CommunityPage,
   ContactPage,
   NotFoundPage,
 } from "./pages";
@@ -20,6 +21,7 @@ function App() {
         <Route path="/services" element={<ServicesPage />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/our-principles" element={<OurPrinciplesPage />} />
+        <Route path="/community" element={<CommunityPage />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route
           path="/helloworld"

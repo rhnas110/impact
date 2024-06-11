@@ -4,6 +4,7 @@ import { Home } from "./Home";
 import { Services } from "./Services";
 import { About } from "./About";
 import { OurPrinciples } from "./OurPrinciples";
+import { Community } from "./Community";
 import { Contact } from "./Contact";
 
 // custom title
@@ -52,6 +53,14 @@ function OurPrinciplesPage() {
     </Page>
   );
 }
+function CommunityPage() {
+  return (
+    <Page>
+      <SEO title="Community - impact." />
+      <Community />
+    </Page>
+  );
+}
 function ContactPage() {
   return (
     <Page>
@@ -78,6 +87,7 @@ export {
   ServicesPage,
   AboutPage,
   OurPrinciplesPage,
+  CommunityPage,
   ContactPage,
   NotFoundPage,
 };

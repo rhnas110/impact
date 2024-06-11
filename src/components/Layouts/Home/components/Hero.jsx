@@ -24,6 +24,7 @@ export const Hero = () => {
           <MotionInView
             initial={{ opacity: 0, x: "10%" }}
             whileInView={{ opacity: 1, x: "0" }}
+            className="overflow-hidden"
           >
             <Slider
               direction={`${Mobile ? "vertical" : "horizontal"}`}
