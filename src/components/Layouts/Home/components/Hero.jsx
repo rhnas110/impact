@@ -1,10 +1,10 @@
+import emote from "../../../../assets/Emote/yae-miko-emote.png";
 import { Link } from "react-router-dom";
 import { Autoplay, Pagination } from "swiper/modules";
 import { SwiperSlide } from "swiper/react";
 // Import Swiper styles
 import "swiper/css/pagination";
 import "../swiper.css";
-import emote from "../../../../assets/Emote/yae-miko-emote.png";
 
 import { Hero as HeroLayout } from "../../Hero";
 import { Play } from "../../Play";

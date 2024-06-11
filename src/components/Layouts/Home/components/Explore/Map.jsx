@@ -1,7 +1,7 @@
-import { Link } from "react-router-dom";
 import map1 from "../../../../../assets/Home/Explore/map-1.jpg";
 import map2 from "../../../../../assets/Home/Explore/map-2.jpg";
 import map3 from "../../../../../assets/Home/Explore/map-3.jpg";
+import { Link } from "react-router-dom";
 
 import { Next } from "../../../../Elements/Button/next";
 import { Image } from "../../../../Elements/Image";

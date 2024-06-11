@@ -17,7 +17,6 @@ import { Next } from "../../../../Elements/Button/next";
 import { Image } from "../../../../Elements/Image";
 import { MotionInView } from "../../../../Elements/Motion";
 import { Slider } from "../../../../Elements/Swiper";
-
 import { Mobile } from "../../../../../utils/screen";
 
 const explore = [

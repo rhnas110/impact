@@ -1,10 +1,9 @@
-import { GrLinkNext } from "react-icons/gr";
 import defaultImage from "../../../assets/Contact/default.gif";
+import { GrLinkNext } from "react-icons/gr";
 import { MotionInView, MotionParallax } from "../../Elements/Motion";
-
+import { useMotionParallax } from "../../../hooks/useMotionParallax";
 import { cn } from "../../../utils";
 import { Mobile } from "../../../utils/screen";
-import { useMotionParallax } from "../../../hooks/useMotionParallax";
 export const CardContact = ({ image, className, motionParallaxClassname }) => {
   const { containerRef, translateY } = useMotionParallax();
   return (

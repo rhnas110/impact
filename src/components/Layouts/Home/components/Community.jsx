@@ -1,7 +1,7 @@
-import { Link } from "react-router-dom";
 import com1 from "../../../../assets/Community/com-1.jpg";
 import com2 from "../../../../assets/Community/com-2.jpg";
 import com3 from "../../../../assets/Community/com-3.jpg";
+import { Link } from "react-router-dom";
 
 import { Next } from "../../../Elements/Button/next";
 import { MotionImage, MotionInView } from "../../../Elements/Motion";

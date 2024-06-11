@@ -1,6 +1,5 @@
 import { useRef } from "react";
 import { GrLinkNext } from "react-icons/gr";
-
 import { Next } from "../../../../Elements/Button/next";
 import { Image } from "../../../../Elements/Image";
 import { motion, useScroll, useTransform } from "../../../../../utils/motion";

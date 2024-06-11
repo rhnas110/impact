@@ -1,12 +1,11 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
 import { GrLinkNext } from "react-icons/gr";
-import { CommunityModal } from "./Modal";
 import { Badge } from "../../../Elements/Badge";
 import { Next } from "../../../Elements/Button/next";
 import { MotionImage, MotionInView } from "../../../Elements/Motion";
 import { community } from "../../../../data/community";
 import { cn } from "../../../../utils";
+import { CommunityModal } from "./Modal";
 
 const INITIALRENDER = 10;
 function getCommunity({ selectedCategory }) {

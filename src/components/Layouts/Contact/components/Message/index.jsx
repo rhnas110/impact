@@ -1,7 +1,7 @@
-import { transition } from "../../../../../config/transition.config";
-import { Mobile } from "../../../../../utils/screen";
 import { Next } from "../../../../Elements/Button/next";
 import { MotionImage, MotionInView } from "../../../../Elements/Motion";
+import { transition } from "../../../../../config/transition.config";
+import { Mobile } from "../../../../../utils/screen";
 
 const card = [
   {

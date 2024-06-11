@@ -4,8 +4,8 @@ import { SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 
 import { Next } from "../../../Elements/Button/next";
-import { MotionInView } from "../../../Elements/Motion";
 import { Image } from "../../../Elements/Image";
+import { MotionInView } from "../../../Elements/Motion";
 import { Slider } from "../../../Elements/Swiper";
 import { breakpoints } from "../../../../config/swiper.config";
 import { services } from "../../../../data/services";

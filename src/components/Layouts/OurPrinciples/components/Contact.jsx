@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
-import { Mobile } from "../../../../utils/screen";
-import { scrollTo } from "../../../../utils/scroll";
 import { Next } from "../../../Elements/Button/next";
 import { MotionInView, MotionParallax } from "../../../Elements/Motion";
 import { useMotionParallax } from "../../../../hooks/useMotionParallax";
+import { Mobile } from "../../../../utils/screen";
+import { scrollTo } from "../../../../utils/scroll";
 export const Contact = () => {
   const { containerRef, translateY } = useMotionParallax();
   return (

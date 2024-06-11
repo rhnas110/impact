@@ -1,5 +1,5 @@
-import { GrLinkNext } from "react-icons/gr";
 import rs from "../../../../assets/Home/Principles/rs.gif";
+import { GrLinkNext } from "react-icons/gr";
 import { Image } from "../../../Elements/Image";
 import { MotionInView } from "../../../Elements/Motion";
 
