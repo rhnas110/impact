@@ -50,6 +50,7 @@ Welcome to **impact.**, the ultimate destination for Genshin Impact enthusiasts!
 
 ## Features
 
+- Created web pages for Home, Services, About, Our Principles, Community, and Contact sections.
 - Achieve pixel-perfect layouts with advanced grid and flexbox techniques, ensuring consistency and responsiveness across all devices.
 - Crafted engaging scroll animations with Framer Motion, resulting in a 50% increase in time spent on page.
 - Implemented scroll parallax effect on images and cards, enhancing visual storytelling and driving a 25% increase in user interactions with featured content.

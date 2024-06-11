@@ -50,6 +50,7 @@ Selamat datang di **impact.**, tujuan utama untuk para penggemar Genshin Impact!
 
 ## Fitur
 
+- Membuat halaman web untuk bagian Home, Services, About, Our Principles, Community, dan Contact sections.
 - Capai tata letak yang sempurna dengan teknik grid dan flexbox canggih, memastikan konsistensi dan responsivitas di semua perangkat.
 - Buat animasi gulir yang menarik dengan Framer Motion, menghasilkan peningkatan 50% dalam waktu yang dihabiskan di halaman.
 - Terapkan efek paralaks gulir pada gambar dan kartu, meningkatkan cerita visual dan mendorong peningkatan 25% dalam interaksi pengguna dengan konten unggulan.
